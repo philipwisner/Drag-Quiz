@@ -1,0 +1,28 @@
+Iteration 1
+- Create a list of questions 
+- Create a list of answers
+- Pair correct answers to questions
+- Generate random questions
+- Do not let questions repeat
+- Generate random other answers for other options
+
+
+Iteration 2
+- Make sure the answers are not showing up in the same position 
+- Validate if user selected correct or incorrect answer
+- Create a total score that updates only when correct answer
+- Remove one life if answer is incorrect
+- If incorrect display correct answer
+- If there are 0 lives, end the game
+- Display final score after game end
+
+
+Iteration 3
+- Create a 10 second countdown timer 
+- Have the timer decrease in time after a certain amount of questions or correct answers
+- If correct add points based off of how much time passed.
+- If incorrect add 0 points and remove one life. 
+
+
+-Design
+-Add gifs and sound effects depending on if correct or wrong
