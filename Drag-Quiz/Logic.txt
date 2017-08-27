@@ -1,3 +1,25 @@
+FLOW
+- Have original start screen on page load
+- After clicking enter, take user to instructions
+- Once user clicks next on instructions it will take them to category card
+- Link each category box to the splash screen for that trivia (6 screens)
+- Once user hits next on category splash the quiz will begin
+- Use the same card layout for the entire quiz
+	- Change the question number for each questions
+	- Update the score with each card
+	- Change the questions and options
+	- Update the lives is necessary
+	- Lower the timer after 3 correct answers
+- Once the user clicks on an answer:
+	- Check if correct if so take them to the correct card layout
+	- If incorrect take them to incorrect card layout displaying correct answer
+- Game ends once they run out of questions or lives
+- On game end, the total score is displayed.
+- You can click the next button which will take you to the begin again.
+
+
+
+
 Iteration 1
 - Create a list of questions 
 - Create a list of answers
@@ -5,7 +27,6 @@ Iteration 1
 - Generate random questions
 - Do not let questions repeat
 - Generate random other answers for other options
-
 
 Iteration 2
 - Make sure the answers are not showing up in the same position 
@@ -26,3 +47,17 @@ Iteration 3
 
 -Design
 -Add gifs and sound effects depending on if correct or wrong
+
+
+- Store the HTML layouts for each card as a variable and use them to be presented.
+- Also store multiple text reponses in an array that can be randomly used
+- Have random gifs be assigned when you get the question wrong
+
+
+DRAG LINGO, DRAG FACTS:
+-These need to have fixed answers with each question not random
+
+NAME THAT QUEEN, WHO SAID IT:
+-Can have random queens be the other 3 answers.
+
+DRAG TRANSFORMATIONS:

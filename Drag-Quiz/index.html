@@ -9,32 +9,134 @@
 	<title>Drag Quiz | Test Your Drag Queen Knownledge</title>
   <link rel="icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="gamelogic.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
   <script  src="https://use.fontawesome.com/a79a49a453.js"></script>
+<!--
+  <script src="js/questionData.js"></script>
+  <script src="js/quiz.js"></script>
+-->
 </head>
 <body>
+
+<!--WELCOME CARD-->
 	<div class="background valign-wrapper">
-		<div class="container card">
+		<div class="card welcome">
+			<h1>Welcome to Drag Quiz</h1>
 			<div class="row">
-				<div class="col s12 m12 l10 x8">
-				<h1>Welcome to Drag Quiz</h1>
-				<div class="row">
-					<div class="col s12 m12 l6 xl6">
-					<img src="http://gph.to/2wuh21G" alt="Drag Queen Gif" class="responsive-img image-center">
-					</div>
-				<div>
+				<div class="col s12 m12 l6 xl6">
+					<img src="img/Drag%20Queens.gif" alt="Drag Queen Gif" class="responsive-img image-center">
+				</div>
+				<div class="enter-text col s12 m12 l6 xl6">
 					<p>How well do you know Drag Queens?</p>
-					<a class="waves-effect waves-light btn pink lighten-3">Enter</a>
+					<a><button class="waves-effect waves-light btn-large pink lighten-3 enter">Enter</button></a>
 				</div>
+			</div>
+		</div>
+
+<!--INSTRUCTION CARD-->
+		<div class="card instructions hidden">
+			<h1>Instructions</h1>
+			<div class="row">
+				<div class="col s12 m12 l6 xl6">
+					<img src="img/instructions.gif" class="responsive-img image-center">
 				</div>
+				<div class="instruction-text col s12 m12 l6 xl6">
+				<ul>
+					<li>Pick a Category of Trivia related to Drag Queens</li>
+					<li>Once the game starts a timer will count down from 10 seconds and your score will be based on how fast you answer the question.</li>
+					<li>But beware, as you answer more questions correctly, you will have less time to answer the questions.</li>
+					<li>You only have 3 lives, so answer carefully.</li>
+				</ul>
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  					<i class="material-icons">navigate_next</i>
+  				</a>
+				</div>
+			</div>
+		</div>
+
+<!-- CATEGORY CARD-->
+<!--
+   <div class="background valign-wrapper">
+		<div class="card category">
+			<h1>Pick your Category</h1>
+			<div class="row">
+				<div class="col s12 m12 l6 xl6">
+					<img src="img/instructions.gif" class="responsive-img image-center">
+				</div>
+				<div class="instruction-text col s12 m12 l6 xl6">
+				<ul>
+					<li>Pick a Category of Trivia related to Drag Queens</li>
+					<li>Once the game starts a timer will count down from 10 seconds and your score will be based on how fast you answer the question.</li>
+					<li>But beware, as you answer more questions correctly, you will have less time to answer the questions.</li>
+					<li>You only have 3 lives, so answer carefully.</li>
+				</ul>
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  					<i class="material-icons">navigate_next</i>
+  				</a>
 				</div>
 			</div>
 		</div>
 	</div>
+-->
+
+<!--QUEEN LINGO CARD-->
+<!--
+  <div class="background valign-wrapper">
+		<div class="card instructions">
+			<h1>Instructions</h1>
+			<div class="row">
+				<div class="col s12 m12 l6 xl6">
+					<img src="img/instructions.gif" class="responsive-img image-center">
+				</div>
+				<div class="instruction-text col s12 m12 l6 xl6">
+				<ul>
+					<li>Pick a Category of Trivia related to Drag Queens</li>
+					<li>Once the game starts a timer will count down from 10 seconds and your score will be based on how fast you answer the question.</li>
+					<li>But beware, as you answer more questions correctly, you will have less time to answer the questions.</li>
+					<li>You only have 3 lives, so answer carefully.</li>
+				</ul>
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  					<i class="material-icons">navigate_next</i>
+  				</a>
+				</div>
+			</div>
+		</div>
+	</div>
+-->
+
+<!--DRAG FACTS CARD-->
+<!--
+  <div class="background valign-wrapper">
+		<div class="card instructions">
+			<h1>Instructions</h1>
+			<div class="row">
+				<div class="col s12 m12 l6 xl6">
+					<img src="img/instructions.gif" class="responsive-img image-center">
+				</div>
+				<div class="instruction-text col s12 m12 l6 xl6">
+				<ul>
+					<li>Pick a Category of Trivia related to Drag Queens</li>
+					<li>Once the game starts a timer will count down from 10 seconds and your score will be based on how fast you answer the question.</li>
+					<li>But beware, as you answer more questions correctly, you will have less time to answer the questions.</li>
+					<li>You only have 3 lives, so answer carefully.</li>
+				</ul>
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  					<i class="material-icons">navigate_next</i>
+  				</a>
+				</div>
+			</div>
+		</div>
+	</div>
+-->
+	</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+<!--  <script src="js/gamelogic.js"></script>-->
+	<script src="js/gameflow.js"></script>
+
 </body>
 </html>
 

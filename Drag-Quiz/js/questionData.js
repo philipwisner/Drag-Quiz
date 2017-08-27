@@ -6,11 +6,11 @@ var questionQueenLingo = [
 	"What does ki ki mean?",
 	"What does tucking mean?",
 	"What does kai kai mean?",
+	"What do cakes refer to?",
+	"Jesus is a biscuit....",
+	"What does serving cheescake mean?",
 	"What does trade mean?",
 	"What does shade mean?",
-	"What do cakes refer to?",
-	"What does serving cheescake mean?",
-	"Jesus is a biscuit so....",
 	"What does clocking someone mean?",
 	"What is a faux queen?",
 	"What does feeling my oats mean?",
@@ -29,23 +29,26 @@ var questionQueenLingo = [
 
 var answersQueenLingo = [
 	["You look like a real girl", "You smell bad", "You are acting sketchy", "You like to drink too much"],
-	["You are clumsy", "Give me the gossip", "Who even drinks tea?" , ""],
+	["You are clumsy", "Give me the gossip", "Who even drinks tea?", "Saying somehting stupid"],
 	["Stealing something", "Looking perfect", "Looking like you have a vagina", "Stealing a wig"],
 	["Looking ugly","Dancing with the rythm","Having flawless face makeup", "To win a contest"],
-	["A gossip sesion", "Kinky", "Sex", "A girly name"],
+	["A gossip session", "Kinky", "Sex", "A girly name"],
 	["Plastic surgery", "Fixing your clothes", "Hiding you dick", "Doing a perfect flip"],
-	["A quickie", "Drag Queen Sex", "Nickname for Kylie", ""],
-	["Mumbai","Hyderabad","Bangalore","New Delhi"]];
+	["A quickie", "Drag Queen Sex", "Nickname for Kylie", "How Drag Queens say Okay"],
+	["Face","Thighs","Ankles","Ass"]
+	["Jesus isn't a biscuit!","Amen!","So let him sop you up!", "With extra gravy!"]
+];
 
 var correctAnswersQueenLingo = [
 	"A. You look like a real girl",
 	"B. Give me the gossip",
-	"C. Taipei",
-	"C. Tokyo",
-	"D. Beijing",
-	"A. Ankara",
-	"B. Bogota",
-	"D. New Delhi"
+	"B. Looking perfect",
+	"C. Having flawless face makeup",
+	"A. A gossip session",
+	"C. Hiding your dick",
+	"B. Drag Queen Sex",
+	"D. Ass",
+	"C. So let him sop you up!"
 ];
 
 var questionsQueenPicture = [
