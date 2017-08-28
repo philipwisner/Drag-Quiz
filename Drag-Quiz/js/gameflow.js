@@ -21,15 +21,15 @@ $(document).ready(function () {
 	})
 	$('#btn-herstory').on('click', function() {
 		$('.category').addClass('hidden');
-//	$('.').removeClass('hidden');
+		$('.herstory').removeClass('hidden');
 	})
 	$('#btn-drag-transform').on('click', function() {
 		$('.category').addClass('hidden');
-//	$('.').removeClass('hidden');
+		$('.drag-transform').removeClass('hidden');
 	})
 	$('#btn-mix-all').on('click', function() {
 		$('.category').addClass('hidden');
-//	$('.').removeClass('hidden');
+		$('.mix-all').removeClass('hidden');
 	})
 	$('#home').on('click', function() {
 		$('.welcome').removeClass('hidden');
@@ -38,7 +38,9 @@ $(document).ready(function () {
 		$('.queen-lingo').addClass('hidden');
 		$('.name-queen').addClass('hidden');
 		$('.who-said').addClass('hidden');
-
+		$('.herstory').addClass('hidden');
+		$('.drag-transform').addClass('hidden');
+		$('.mix-all').addClass('hidden');
 	})
 	$('#instructions').on('click', function() {
 		$('.instructions').removeClass('hidden');
@@ -46,8 +48,10 @@ $(document).ready(function () {
 		$('.category').addClass('hidden');
 		$('.queen-lingo').addClass('hidden');
 		$('.name-queen').addClass('hidden');
-			$('.who-said').addClass('hidden');
-
+		$('.who-said').addClass('hidden');
+		$('.herstory').addClass('hidden');
+		$('.drag-transform').addClass('hidden');
+		$('.mix-all').addClass('hidden');
 	})
 	$('#categories').on('click', function() {
 		$('.category').removeClass('hidden');
@@ -56,6 +60,9 @@ $(document).ready(function () {
 		$('.queen-lingo').addClass('hidden');
 		$('.name-queen').addClass('hidden');
 		$('.who-said').addClass('hidden');
+		$('.herstory').addClass('hidden');
+		$('.drag-transform').addClass('hidden');
+		$('.mix-all').addClass('hidden');
 	})
 })
 
