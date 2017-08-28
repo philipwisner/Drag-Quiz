@@ -41,6 +41,9 @@ $(document).ready(function () {
 		$('.herstory').addClass('hidden');
 		$('.drag-transform').addClass('hidden');
 		$('.mix-all').addClass('hidden');
+		$('.correct').addClass('hidden');
+		$('.wrong').addClass('hidden');
+		$('.game-over').addClass('hidden');
 	})
 	$('#instructions').on('click', function() {
 		$('.instructions').removeClass('hidden');
@@ -52,6 +55,9 @@ $(document).ready(function () {
 		$('.herstory').addClass('hidden');
 		$('.drag-transform').addClass('hidden');
 		$('.mix-all').addClass('hidden');
+		$('.correct').addClass('hidden');
+		$('.wrong').addClass('hidden');
+		$('.game-over').addClass('hidden');
 	})
 	$('#categories').on('click', function() {
 		$('.category').removeClass('hidden');
@@ -63,8 +69,15 @@ $(document).ready(function () {
 		$('.herstory').addClass('hidden');
 		$('.drag-transform').addClass('hidden');
 		$('.mix-all').addClass('hidden');
+		$('.correct').addClass('hidden');
+		$('.wrong').addClass('hidden');
+		$('.game-over').addClass('hidden');
+	})
+	$('#queen-lingo-quiz').on('click', function() {
+		
 	})
 })
+
 
 
 //way to hide current

@@ -7,7 +7,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Drag Quiz | Test Your Drag Queen Knownledge</title>
-  <link rel="icon" href="">
+  <link rel="icon" href="img/crown.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,7 +22,7 @@
 	<div class="background valign-wrapper">
 	
 <!--WELCOME CARD-->
-		<div class="card welcome">
+		<div class="card welcome .hidden">
 			<h1>Welcome to Drag Quiz</h1>
 			<div class="row">
 				<div class="col s12 m12 l6 xl6">
@@ -44,7 +44,7 @@
 				</div>
 				<div class="instruction-text col s12 m12 l6 xl6">
 				<ul>
-					<li>Pick a Category of Trivia related to Drag Queens</li>
+					<li>Pick a Category of Trivia related to Drag Queens.</li>
 					<li>Once the game starts a timer will count down from 10 seconds and your score will be based on how fast you answer the question.</li>
 					<li>But beware, as you answer more questions correctly, you will have less time to answer the questions.</li>
 					<li>You only have 3 lives, so answer carefully.</li>
@@ -105,12 +105,40 @@
 				</div>
 				<div class="queen-lingo-text col s12 m12 l6 xl6">
 				<ul>
-					<li>Drag queens are known for the crazy way of speaking. Plus the vocabulary is always changing.</li>
+					<li>Drag queens are known for their crazy way of speaking. Plus their vocabulary is always changing.</li>
 					<li>Let's see how well you know Drag Lingo!</li>
 				</ul>
-  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow" id="queen-lingo-quiz" href="Drag-Lingo/index.html">
   					<i class="material-icons">navigate_next</i>
   				</a>
+				</div>
+			</div>
+		</div>
+
+<!--QUEEN LINGO QUESTION CARD-->
+		<div class="card queen-lingo-question hidden">
+			<h1>QUEEN LINGO</h1>
+			<h3>Question <span>1</span></h3>
+			<p class="score-float"><b class="bold">SCORE</b> <span>0</span>pts</p>
+			<p class="question">Question: <span></span></p>
+			<p class="timer"><b class="bold">TIMER</b> <span></span></p>
+			<ul class="lives-count">
+				<li id="lives-text"><b class="bold">LIVES</b>
+				</li>
+				<li>
+					<span><i class="material-icons">favorite</i></span>
+					<span><i class="material-icons">favorite</i></span>
+					<span><i class="material-icons">favorite</i></span>
+				</li>
+			</ul>
+			<div class="row answers">
+				<div class="col s12 m12 l6 xl6">
+					<p>OPTION 1</p>
+					<p>OPTION 2</p>
+				</div>
+				<div class="col s12 m12 l6 xl6">
+					<p>OPTION 3</p>
+					<p>OPTION 4</p>
 				</div>
 			</div>
 		</div>
@@ -126,7 +154,7 @@
 				<ul>
 					<li>You will shown a picture of a famous drag queen and four potential answers. </li>
 					<li>Make sure you chose the right one.</li>
-					<li>Because drag queen don't like it when you don't know their name!</li>	
+					<li>Because Queens don't like it when you don't know their name!</li>	
 				</ul>
   				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
   					<i class="material-icons">navigate_next</i>
@@ -134,7 +162,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 <!--WHO SAID IT CARD-->
 		<div class="card who-said hidden">
 			<h1>Who said it?</h1>
@@ -153,8 +181,36 @@
   				</a>
 				</div>
 			</div>
-		</div>		
-		
+		</div>	
+			
+<!--WHO SAID IT QUESTION CARD-->
+		<div class="card who-said-question hidden">
+			<h1>Who said it?</h1>
+			<h3>Question <span>1</span></h3>
+			<p class="score-float"><b class="bold">SCORE</b> <span>0</span>pts</p>
+			<p class="question">Question: <span></span></p>
+			<p class="timer"><b class="bold">TIMER</b> <span></span></p>
+			<ul class="lives-count">
+				<li id="lives-text"><b class="bold">LIVES</b>
+				</li>
+				<li>
+					<span><i class="material-icons">favorite</i></span>
+					<span><i class="material-icons">favorite</i></span>
+					<span><i class="material-icons">favorite</i></span>
+				</li>
+			</ul>
+			<div class="row answers">
+				<div class="col s12 m12 l6 xl6">
+					<p>OPTION 1</p>
+					<p>OPTION 2</p>
+				</div>
+				<div class="col s12 m12 l6 xl6">
+					<p>OPTION 3</p>
+					<p>OPTION 4</p>
+				</div>
+			</div>
+		</div>
+					
 <!--DRAG HERSTORY CARD-->
 		<div class="card herstory hidden">
 			<h1>Drag Herstory</h1>
@@ -165,7 +221,7 @@
 				<div class="herstory-text col s12 m12 l6 xl6">
 				<ul>
 					<li>While Drag Queens seem  like a recent phenomenon, they have actually been around for a while.</li>
-					<li>So let's see who well you know your drag HERstory.</li>
+					<li>So let's see who well you know your Drag HERstory.</li>
 					<li>Don't worry there will be some general fun drag trivia included.</li>
 				</ul>
   				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
@@ -174,7 +230,35 @@
 				</div>
 			</div>
 		</div>
-  
+ 
+<!--DRAG HERSTORY QUESTION CARD-->
+		<div class="card herstory-question hidden">
+			<h1>DRAG HERSTORY</h1>
+			<h3>Question <span>1</span></h3>
+			<p class="score-float"><b class="bold">SCORE</b> <span>0</span>pts</p>
+			<p class="question">Question: <span></span></p>
+			<p class="timer"><b class="bold">TIMER</b> <span></span></p>
+			<ul class="lives-count">
+				<li id="lives-text"><b class="bold">LIVES</b>
+				</li>
+				<li>
+					<span><i class="material-icons">favorite</i></span>
+					<span><i class="material-icons">favorite</i></span>
+					<span><i class="material-icons">favorite</i></span>
+				</li>
+			</ul>
+			<div class="row answers">
+				<div class="col s12 m12 l6 xl6">
+					<p>OPTION 1</p>
+					<p>OPTION 2</p>
+				</div>
+				<div class="col s12 m12 l6 xl6">
+					<p>OPTION 3</p>
+					<p>OPTION 4</p>
+				</div>
+			</div>
+		</div> 
+    
 <!--DRAG TRANSFORMATIONS CARD-->
 		<div class="card drag-transform hidden">
 			<h1>Drag Transformations</h1>
@@ -207,7 +291,6 @@
 					<li>Can't decide which category to play?</li>
 					<li>Why not try a mix of all the questions?</li>
 					<li>You must be a Drag Master if you think you are ready for this challenge.</li>
-
 				</ul>
   				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
   					<i class="material-icons">navigate_next</i>
@@ -216,6 +299,71 @@
 			</div>
 		</div>
 
+<!--CORRECT CARD-->
+		<div class="card correct hidden">
+			<h1>CORRECT</h1>
+			<div class="row">
+				<div class="col s12 m12 l6 xl6">
+					<img src="img/exactly.gif" class="responsive-img image-center">
+				</div>
+				<div class="correct-text col s12 m12 l6 xl6">
+					<p>CONDRAGULATIONS! You Guessed Right</p>
+				<ul>
+					<li><b class="bold">TIME</b> <span></span></li>
+					<li><b class="bold">SCORE</b> <span></span></li>
+					<li><b class="bold">TOTAL</b> <span></span><li>
+				</ul>
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  					<i class="material-icons">navigate_next</i>
+  				</a>
+				</div>
+			</div>
+		</div>
+
+<!--WRONG CARD-->
+		<div class="card wrong hidden">
+			<h1>WRONG</h1>
+			<div class="row">
+				<div class="col s12 m12 l6 xl6">
+					<img src="img/fail5.gif" class="responsive-img image-center">
+				</div>
+				<div class="wrong-text col s12 m12 l6 xl6">
+					<p>SASHAY AWAY! You lost a life!</p>
+				<ul>
+					<li id="lives-text"><b class="bold">LIVES</b></li>
+					<li>
+						<span><i class="material-icons small">favorite</i></span>
+						<span><i class="material-icons small">favorite</i></span>
+						<span><i class="material-icons small">favorite</i></span>
+					</li>
+					<li><b class="bold">TOTAL</b> <span></span><li>
+				</ul>
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  					<i class="material-icons">navigate_next</i>
+  				</a>
+				</div>
+			</div>
+		</div>
+
+<!--GAME OVER CARD-->
+		<div class="card game-over hidden">
+			<h1>GAME OVER</h1>
+			<div class="row">
+				<div class="col s12 m12 l6 xl6">
+					<img src="img/byeGirl.gif" class="responsive-img image-center">
+				</div>
+				<div class="game-over-text col s12 m12 l6 xl6">
+					<p>BYE GIRL BYE!</p>
+				<ul>
+					<li><b class="bold">TOTAL</b> <span></span><li>
+				</ul>
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  					<i class="material-icons">navigate_next</i>
+  				</a>
+				</div>
+			</div>
+		</div>
+		
 <!--Fixed Bottom Button Navigation -->
 		<div class="fixed-action-btn horizontal click-to-toggle">
 			<a class="btn-floating btn-large pink lighten-3">

@@ -1,7 +1,4 @@
 FLOW
-- Have original start screen on page load
-- After clicking enter, take user to instructions
-- Once user clicks next on instructions it will take them to category card
 - Link each category box to the splash screen for that trivia (6 screens)
 - Once user hits next on category splash the quiz will begin
 - Use the same card layout for the entire quiz
@@ -15,9 +12,6 @@ FLOW
 	- If incorrect take them to incorrect card layout displaying correct answer
 - Game ends once they run out of questions or lives
 - On game end, the total score is displayed.
-- You can click the next button which will take you to the begin again.
-
-
 
 
 Iteration 1
