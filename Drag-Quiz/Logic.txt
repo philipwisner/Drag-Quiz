@@ -1,5 +1,4 @@
 FLOW
-- Link each category box to the splash screen for that trivia (6 screens)
 - Once user hits next on category splash the quiz will begin
 - Use the same card layout for the entire quiz
 	- Change the question number for each questions
