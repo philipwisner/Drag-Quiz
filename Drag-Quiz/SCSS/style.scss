@@ -1,5 +1,11 @@
 @import "responsive-font-size";
 
+$splash-color: #f06292;
+$accent-color: #f48fb1;
+$heading-color: #616161;
+$main-text-color: #757575;
+$main-text-weight: 300;
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -25,17 +31,17 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 	@include responsive-font-size (1.5em, 5.5em, 640px, 1200px, 0.3em);
 	font-weight: 700;
-	color: #616161;
+	color: $heading-color;
 }
 
 p {
-	color: #757575;
+	color: $main-text-color;
 	font-weight: 300;
 }
 
 
 .background {
-	background-color: #f06292;
+	background-color: $splash-color;
 	height: 55vh;
 	width: 100%;
 }
@@ -83,15 +89,109 @@ p {
 		max-width: 600px;
 		margin: 0 auto;
 		@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.3em);
+		color: $main-text-color;
+		font-weight: $main-text-weight;
 		}
 	.arrow {
 		margin-right: 20px;
 		position: absolute;
 		bottom: 50px;
 		right: 50px;
-
 	}
 }
 
+.category {
+	.cat-grid {
+		margin: 0 auto;
+		padding: 0 40px;
+	}
+	.cat-item {
+		text-align: center;
+		padding: 30px;
+		margin: 10px 40px;
+		background-color: $accent-color;
+		p {
+		@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.5em);
+		color: white;
+		font-weight: 400;
+		}
+	}
+}
 
+@media (min-width: 1200px) {
+  .cat-item {
+    height: 200px;
+		p {
+			padding-top: 50px;
+		}
+  }
+}
 
+.queen-lingo-text {
+	margin: 0 auto;
+	text-align: left;
+	margin-top: 20px;
+	ul {
+		padding: 1S0px;
+	}
+	ul li {
+		padding-bottom: 40px;
+		max-width: 600px;
+		margin: 0 auto;
+		color: $main-text-color;
+		font-weight: $main-text-weight;
+		@include responsive-font-size (1em, 2.3em, 640px, 1200px, 0.3em);
+		}
+	.arrow {
+		margin-right: 20px;
+		position: absolute;
+		bottom: 50px;
+		right: 50px;
+	}
+}
+
+.name-queen-text {
+	margin: 0 auto;
+	text-align: left;
+	margin-top: 20px;
+	ul {
+		padding: 1S0px;
+	}
+	ul li {
+		padding-bottom: 40px;
+		max-width: 600px;
+		margin: 0 auto;
+		color: $main-text-color;
+		font-weight: $main-text-weight;
+		@include responsive-font-size (1em, 2em, 640px, 1200px, 0.3em);
+		}
+	.arrow {
+		margin-right: 20px;
+		position: absolute;
+		bottom: 50px;
+		right: 50px;
+	}
+}
+
+.who-said-text {
+	margin: 0 auto;
+	text-align: left;
+	margin-top: 20px;
+	ul {
+		padding: 1S0px;
+	}
+	ul li {
+		padding-bottom: 30px;
+		max-width: 600px;
+		margin: 0 auto;
+		color: $main-text-color;
+		font-weight: $main-text-weight;
+		@include responsive-font-size (1em, 2em, 640px, 1200px, 0.3em);
+		}
+	.arrow {
+		margin-right: 20px;
+		position: absolute;
+		bottom: 50px;
+		right: 50px;
+	}
+}
