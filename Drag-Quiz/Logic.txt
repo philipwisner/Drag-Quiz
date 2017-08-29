@@ -42,7 +42,6 @@ Iteration 3
 -Add gifs and sound effects depending on if correct or wrong
 
 
-- Store the HTML layouts for each card as a variable and use them to be presented.
 - Also store multiple text reponses in an array that can be randomly used
 - Have random gifs be assigned when you get the question wrong
 

@@ -47,7 +47,7 @@
 					<li>Pick a Category of Trivia related to Drag Queens.</li>
 					<li>Once the game starts a timer will count down from 10 seconds and your score will be based on how fast you answer the question.</li>
 					<li>But beware, as you answer more questions correctly, you will have less time to answer the questions.</li>
-					<li>You only have 3 lives, so answer carefully.</li>
+					<li>You only have 5 lives, so answer carefully.</li>
 				</ul>
   				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow" id="instructions-next">
   					<i class="material-icons">navigate_next</i>
@@ -107,7 +107,7 @@
 					<li>Drag queens are known for their crazy way of speaking. Plus their vocabulary is always changing.</li>
 					<li>Let's see how well you know Drag Lingo!</li>
 				</ul>
-  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow" id="queen-lingo-quiz" href="Drag-Lingo/index.html">
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow" id="queen-lingo-quiz">
   					<i class="material-icons">navigate_next</i>
   				</a>
 				</div>
@@ -209,13 +209,14 @@
 				</div>
 			</div>
 		</div>
+
 <!--WHO SAID IT QUESTION CARD-->
 		<div class="card who-said-question hidden">
 			<h1>Who said it?</h1>
 			<h3>Question <span>1</span></h3>
 			<p class="score-float"><b class="bold">SCORE</b> <span>0</span>pts</p>
 			<p class="question">Question: <span></span></p>
-			<p class="timer"><b class="bold">TIMER</b> <span></span></p>
+			<p class="timer"><b class="bold">TIMER</b> <span id="timer"></span></p>
 			<ul class="lives-count">
 				<li id="lives-text"><b class="bold">LIVES</b>
 				</li>
@@ -227,16 +228,16 @@
 			</ul>
 			<div class="row answers">
 				<div class="col s12 m12 l6 xl6">
-					<p>OPTION 1</p>
-					<p>OPTION 2</p>
+					<p class="answer">OPTION 1</p>
+					<p class="answer">OPTION 2</p>
 				</div>
 				<div class="col s12 m12 l6 xl6">
-					<p>OPTION 3</p>
-					<p>OPTION 4</p>
+					<p class="answer">OPTION 3</p>
+					<p class="answer">OPTION 4</p>
 				</div>
 			</div>
 		</div>
-					
+
 <!--DRAG HERSTORY CARD-->
 		<div class="card herstory hidden">
 			<h1>Drag Herstory</h1>
@@ -358,7 +359,6 @@
 			<h1>CORRECT</h1>
 			<div class="row">
 				<div class="col s12 m12 l6 xl6">
-					<img src="img/exactly.gif" class="responsive-img image-center">
 				</div>
 				<div class="correct-text col s12 m12 l6 xl6">
 					<p>CONDRAGULATIONS! You Guessed Right</p>
@@ -436,6 +436,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 <!--  <script src="js/gamelogic.js"></script>-->
 	<script src="js/gameflow.js"></script>
+	<script src="js/QueenLingoQuiz.js"></script>
 
 </body>
 </html>

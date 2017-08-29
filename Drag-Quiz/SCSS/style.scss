@@ -50,9 +50,18 @@ p {
 	margin: 0 auto;
 	margin-top: 45vh;
 	padding: 30px 0;
+	.queen-lingo-question {
+	margin-top: 0;
+	}
+	.correct {
+	margin-top: 0;
+	}
+	.wrong {
+	margin-top: 0;
+	}
 }
 
-.image-center {
+.img-center, .image-center {
 	display: block;
 	margin: 0 auto;
 	width: 100%;
@@ -172,16 +181,19 @@ p {
 		color: $main-text-color;
 		@include responsive-font-size (1em, 2.3em, 640px, 1200px, 0.3em);
 		padding: 0;
-	} .score-float {
+	}
+	.score-float {
 		position: absolute;
 		top: 60px;
 		right: 40px;
 		@include responsive-font-size (1em, 1.6em, 640px, 1200px, 0.3em);
-	} .question {
+	}
+	.question {
 		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
 		text-align: center;
 		margin: 20px 0;
-	} .timer {
+	}
+	.timer {
 		float: right;
 		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
 		right: 10%;	
@@ -204,7 +216,15 @@ p {
 		text-align: center;
 		p {
 			padding: 20px;
+			&:hover {
+				color: $accent-color;
+				cursor: pointer;
+				font-weight: 700;
+			}
 		}
+//Change text color to pink on hover
+//Change mouse to click
+
 	}
 	} 
 
@@ -584,7 +604,7 @@ p {
 		color: $main-text-color;
 		font-weight: $main-text-weight;
 		@include responsive-font-size (1.2em, 2.4em, 640px, 1200px, 0.3em);
-		span {
+		span i {
 			color: $accent-color;
 		}
 		}
