@@ -1,23 +1,52 @@
-/* line 9, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 10, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* line 15, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 16, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
 
-/* line 21, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 22, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .hidden {
   display: none;
 }
 
-/* line 25, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 26, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+/* line 33, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+/* line 48, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* line 53, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 h1 {
   text-align: center;
   margin: 0 auto;
@@ -31,75 +60,75 @@ h1 {
 }
 
 @media all and (max-width: 640px) {
-  /* line 25, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 53, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   h1 {
     font-size: 1.5em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 25, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 53, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   h1 {
     font-size: 5.5em;
   }
 }
 
 @media all and (max-width: 1135px) {
-  /* line 25, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 53, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   h1 {
     font-size: 4.90704em;
   }
 }
 
 @media all and (max-width: 1066px) {
-  /* line 25, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 53, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   h1 {
     font-size: 4.31456em;
   }
 }
 
 @media all and (max-width: 992px) {
-  /* line 25, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 53, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   h1 {
     font-size: 3.72148em;
   }
 }
 
 @media all and (max-width: 912px) {
-  /* line 25, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 53, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   h1 {
     font-size: 3.12957em;
   }
 }
 
 @media all and (max-width: 825px) {
-  /* line 25, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 53, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   h1 {
     font-size: 2.54398em;
   }
 }
 
 @media all and (max-width: 728px) {
-  /* line 25, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 53, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   h1 {
     font-size: 1.96246em;
   }
 }
 
-/* line 37, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 65, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 p {
   color: #757575;
   font-weight: 300;
 }
 
-/* line 42, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 70, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .background {
   background-color: #f06292;
   height: 55vh;
   width: 100%;
 }
 
-/* line 48, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 76, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .card {
   width: 80vw;
   margin: 0 auto;
@@ -107,22 +136,22 @@ p {
   padding: 30px 0;
 }
 
-/* line 53, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 81, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .card .queen-lingo-question {
   margin-top: 0;
 }
 
-/* line 56, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 84, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .card .correct {
   margin-top: 0;
 }
 
-/* line 59, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 87, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .card .wrong {
   margin-top: 0;
 }
 
-/* line 64, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 92, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .img-center, .image-center {
   display: block;
   margin: 0 auto;
@@ -130,19 +159,19 @@ p {
   padding: 20px 30px;
 }
 
-/* line 71, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 99, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .bold {
   font-weight: 500px;
 }
 
-/* line 75, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 103, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .enter-text {
   margin: 0 auto;
   text-align: center;
   margin-top: 60px;
 }
 
-/* line 79, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 107, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .enter-text p {
   padding: 20px;
   max-width: 600px;
@@ -152,72 +181,72 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 79, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 107, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .enter-text p {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 79, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 107, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .enter-text p {
     font-size: 3.5em;
   }
 }
 
 @media all and (max-width: 1029px) {
-  /* line 79, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 107, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .enter-text p {
     font-size: 2.57575em;
   }
 }
 
 @media all and (max-width: 829px) {
-  /* line 79, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 107, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .enter-text p {
     font-size: 1.67419em;
   }
 }
 
-/* line 86, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 114, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .enter-text .enter {
   font-size: 2em;
 }
 
 @media all and (max-width: 640px) {
-  /* line 86, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 114, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .enter-text .enter {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 86, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 114, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .enter-text .enter {
     font-size: 2em;
   }
 }
 
 @media all and (max-width: 900px) {
-  /* line 86, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 114, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .enter-text .enter {
     font-size: 1.44978em;
   }
 }
 
-/* line 91, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 119, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .instruction-text {
   margin: 0 auto;
   text-align: left;
   margin-top: 20px;
 }
 
-/* line 95, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 123, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .instruction-text ul {
   padding: 1S0px;
 }
 
-/* line 98, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 126, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .instruction-text ul li {
   padding-bottom: 20px;
   max-width: 600px;
@@ -228,34 +257,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 98, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 126, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .instruction-text ul li {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 98, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 126, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .instruction-text ul li {
     font-size: 1.75em;
   }
 }
 
 @media all and (max-width: 994px) {
-  /* line 98, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 126, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .instruction-text ul li {
     font-size: 1.48767em;
   }
 }
 
 @media all and (max-width: 794px) {
-  /* line 98, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 126, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .instruction-text ul li {
     font-size: 1.21788em;
   }
 }
 
-/* line 106, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 134, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .instruction-text .arrow {
   margin-right: 20px;
   position: absolute;
@@ -263,18 +292,18 @@ p {
   right: 50px;
 }
 
-/* line 115, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 143, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .category .cat-grid {
   margin: 0 auto;
   padding: 0 40px;
 }
 
-/* line 120, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 148, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .category a :hover {
   background-color: #f06292;
 }
 
-/* line 124, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 152, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .category .cat-item {
   text-align: center;
   padding: 30px;
@@ -283,58 +312,58 @@ p {
   border-radius: 3px;
 }
 
-/* line 131, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 159, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .category p {
-  font-size: 1.75em;
+  font-size: 2em;
   color: white;
   font-weight: 400;
 }
 
 @media all and (max-width: 640px) {
-  /* line 131, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 159, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .category p {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 131, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 159, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .category p {
-    font-size: 1.75em;
+    font-size: 2em;
   }
 }
 
-@media all and (max-width: 857px) {
-  /* line 131, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+@media all and (max-width: 900px) {
+  /* line 159, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .category p {
-    font-size: 1.30447em;
+    font-size: 1.44978em;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 139, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 167, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .cat-item {
     height: 200px;
   }
-  /* line 141, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 169, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .cat-item p {
     padding-top: 50px;
   }
 }
 
-/* line 147, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 175, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-text {
   margin: 0 auto;
   text-align: left;
   margin-top: 20px;
 }
 
-/* line 151, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 179, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-text ul {
   padding: 1S0px;
 }
 
-/* line 154, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 182, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-text ul li {
   padding-bottom: 40px;
   max-width: 600px;
@@ -345,41 +374,41 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 154, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 182, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-text ul li {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 154, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 182, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-text ul li {
     font-size: 2.3em;
   }
 }
 
 @media all and (max-width: 1043px) {
-  /* line 154, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 182, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-text ul li {
     font-size: 1.89552em;
   }
 }
 
 @media all and (max-width: 878px) {
-  /* line 154, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 182, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-text ul li {
     font-size: 1.50403em;
   }
 }
 
 @media all and (max-width: 703px) {
-  /* line 154, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 182, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-text ul li {
     font-size: 1.12645em;
   }
 }
 
-/* line 162, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 190, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-text .arrow {
   margin-right: 20px;
   position: absolute;
@@ -387,12 +416,12 @@ p {
   right: 50px;
 }
 
-/* line 170, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 198, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question {
   position: relative;
 }
 
-/* line 172, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 200, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question h1 {
   text-align: left;
   margin: 0;
@@ -400,7 +429,7 @@ p {
   margin-left: 20px;
 }
 
-/* line 178, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 206, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question h3 {
   text-align: left;
   margin: 5px 0 0 30px;
@@ -410,41 +439,41 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 178, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 206, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question h3 {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 178, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 206, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question h3 {
     font-size: 2.3em;
   }
 }
 
 @media all and (max-width: 1043px) {
-  /* line 178, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 206, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question h3 {
     font-size: 1.89552em;
   }
 }
 
 @media all and (max-width: 878px) {
-  /* line 178, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 206, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question h3 {
     font-size: 1.50403em;
   }
 }
 
 @media all and (max-width: 703px) {
-  /* line 178, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 206, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question h3 {
     font-size: 1.12645em;
   }
 }
 
-/* line 185, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 213, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question .score-float {
   position: absolute;
   top: 60px;
@@ -453,69 +482,77 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 185, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 213, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .score-float {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 185, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 213, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .score-float {
     font-size: 1.6em;
   }
 }
 
 @media all and (max-width: 975px) {
-  /* line 185, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 213, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .score-float {
     font-size: 1.38977em;
   }
 }
 
 @media all and (max-width: 765px) {
-  /* line 185, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 213, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .score-float {
     font-size: 1.15618em;
   }
 }
 
-/* line 191, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 219, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question .question {
-  font-size: 1.85em;
+  font-size: 2em;
   text-align: center;
   margin: 20px 0;
+  font-weight: 700;
 }
 
 @media all and (max-width: 640px) {
-  /* line 191, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 219, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .question {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 191, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 219, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .question {
-    font-size: 1.85em;
+    font-size: 2em;
   }
 }
 
-@media all and (max-width: 1005px) {
-  /* line 191, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+@media all and (max-width: 1020px) {
+  /* line 219, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .question {
-    font-size: 1.55667em;
+    font-size: 1.66585em;
   }
 }
 
-@media all and (max-width: 811px) {
-  /* line 191, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+@media all and (max-width: 836px) {
+  /* line 219, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .question {
-    font-size: 1.26203em;
+    font-size: 1.33673em;
   }
 }
 
-/* line 196, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+@media all and (max-width: 648px) {
+  /* line 219, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  .queen-lingo-question .question {
+    font-size: 1.01346em;
+  }
+}
+
+/* line 225, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question .timer {
   float: right;
   font-size: 1.65em;
@@ -525,34 +562,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 196, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 225, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .timer {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 196, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 225, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .timer {
     font-size: 1.65em;
   }
 }
 
 @media all and (max-width: 982px) {
-  /* line 196, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 225, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .timer {
     font-size: 1.42193em;
   }
 }
 
 @media all and (max-width: 775px) {
-  /* line 196, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 225, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .timer {
     font-size: 1.17591em;
   }
 }
 
-/* line 202, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 231, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question .lives-count {
   float: left;
   position: absolute;
@@ -563,39 +600,39 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 202, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 231, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .lives-count {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 202, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 231, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .lives-count {
     font-size: 1.65em;
   }
 }
 
 @media all and (max-width: 982px) {
-  /* line 202, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 231, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .lives-count {
     font-size: 1.42193em;
   }
 }
 
 @media all and (max-width: 775px) {
-  /* line 202, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 231, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .lives-count {
     font-size: 1.17591em;
   }
 }
 
-/* line 209, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 238, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question .lives-count i {
   color: #f48fb1;
 }
 
-/* line 212, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 241, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question .answers {
   margin-top: 80px;
   padding: 20px 20px 0 20px;
@@ -604,58 +641,59 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 212, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 241, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .answers {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 212, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 241, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .answers {
     font-size: 1.85em;
   }
 }
 
 @media all and (max-width: 1005px) {
-  /* line 212, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 241, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .answers {
     font-size: 1.55667em;
   }
 }
 
 @media all and (max-width: 811px) {
-  /* line 212, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 241, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .queen-lingo-question .answers {
     font-size: 1.26203em;
   }
 }
 
-/* line 217, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 246, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question .answers p {
   padding: 20px;
 }
 
-/* line 219, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 248, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .queen-lingo-question .answers p:hover {
   color: #f48fb1;
   cursor: pointer;
+  cursor: hand;
   font-weight: 700;
 }
 
-/* line 231, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 261, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-text {
   margin: 0 auto;
   text-align: left;
   margin-top: 20px;
 }
 
-/* line 235, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 265, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-text ul {
   padding: 1S0px;
 }
 
-/* line 238, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-text ul li {
   padding-bottom: 40px;
   max-width: 600px;
@@ -666,41 +704,41 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 238, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-text ul li {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 238, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-text ul li {
     font-size: 2em;
   }
 }
 
 @media all and (max-width: 1020px) {
-  /* line 238, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-text ul li {
     font-size: 1.66585em;
   }
 }
 
 @media all and (max-width: 836px) {
-  /* line 238, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-text ul li {
     font-size: 1.33673em;
   }
 }
 
 @media all and (max-width: 648px) {
-  /* line 238, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-text ul li {
     font-size: 1.01346em;
   }
 }
 
-/* line 246, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 276, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-text .arrow {
   margin-right: 20px;
   position: absolute;
@@ -708,12 +746,12 @@ p {
   right: 50px;
 }
 
-/* line 254, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 284, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-question {
   position: relative;
 }
 
-/* line 256, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 286, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-question h1 {
   text-align: left;
   margin: 0;
@@ -721,7 +759,7 @@ p {
   margin-left: 20px;
 }
 
-/* line 262, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 292, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-question h3 {
   text-align: left;
   margin: 5px 0 0 30px;
@@ -731,41 +769,41 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 262, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 292, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question h3 {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 262, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 292, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question h3 {
     font-size: 2.3em;
   }
 }
 
 @media all and (max-width: 1043px) {
-  /* line 262, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 292, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question h3 {
     font-size: 1.89552em;
   }
 }
 
 @media all and (max-width: 878px) {
-  /* line 262, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 292, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question h3 {
     font-size: 1.50403em;
   }
 }
 
 @media all and (max-width: 703px) {
-  /* line 262, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 292, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question h3 {
     font-size: 1.12645em;
   }
 }
 
-/* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 298, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-question .score-float {
   position: absolute;
   top: 60px;
@@ -774,34 +812,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 298, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .score-float {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 298, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .score-float {
     font-size: 1.6em;
   }
 }
 
 @media all and (max-width: 975px) {
-  /* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 298, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .score-float {
     font-size: 1.38977em;
   }
 }
 
 @media all and (max-width: 765px) {
-  /* line 268, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 298, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .score-float {
     font-size: 1.15618em;
   }
 }
 
-/* line 273, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 303, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-question .question {
   font-size: 1.85em;
   text-align: center;
@@ -809,34 +847,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 273, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 303, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .question {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 273, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 303, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .question {
     font-size: 1.85em;
   }
 }
 
 @media all and (max-width: 1005px) {
-  /* line 273, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 303, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .question {
     font-size: 1.55667em;
   }
 }
 
 @media all and (max-width: 811px) {
-  /* line 273, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 303, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .question {
     font-size: 1.26203em;
   }
 }
 
-/* line 277, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 307, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-question .timer {
   float: right;
   font-size: 1.65em;
@@ -846,34 +884,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 277, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 307, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .timer {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 277, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 307, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .timer {
     font-size: 1.65em;
   }
 }
 
 @media all and (max-width: 982px) {
-  /* line 277, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 307, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .timer {
     font-size: 1.42193em;
   }
 }
 
 @media all and (max-width: 775px) {
-  /* line 277, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 307, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .timer {
     font-size: 1.17591em;
   }
 }
 
-/* line 283, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 313, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-question .lives-count {
   float: left;
   position: absolute;
@@ -884,39 +922,39 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 283, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 313, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .lives-count {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 283, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 313, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .lives-count {
     font-size: 1.65em;
   }
 }
 
 @media all and (max-width: 982px) {
-  /* line 283, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 313, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .lives-count {
     font-size: 1.42193em;
   }
 }
 
 @media all and (max-width: 775px) {
-  /* line 283, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 313, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .lives-count {
     font-size: 1.17591em;
   }
 }
 
-/* line 290, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 320, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-question .lives-count i {
   color: #f48fb1;
 }
 
-/* line 293, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 323, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-question .answers {
   margin-top: 80px;
   padding: 20px 20px 0 20px;
@@ -925,51 +963,51 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 293, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 323, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .answers {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 293, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 323, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .answers {
     font-size: 1.85em;
   }
 }
 
 @media all and (max-width: 1005px) {
-  /* line 293, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 323, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .answers {
     font-size: 1.55667em;
   }
 }
 
 @media all and (max-width: 811px) {
-  /* line 293, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 323, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .name-queen-question .answers {
     font-size: 1.26203em;
   }
 }
 
-/* line 298, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 328, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .name-queen-question .answers p {
   padding: 20px;
 }
 
-/* line 304, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 334, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-text {
   margin: 0 auto;
   text-align: left;
   margin-top: 20px;
 }
 
-/* line 308, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 338, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-text ul {
   padding: 1S0px;
 }
 
-/* line 311, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-text ul li {
   padding-bottom: 30px;
   max-width: 600px;
@@ -980,41 +1018,41 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 311, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-text ul li {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 311, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-text ul li {
     font-size: 2em;
   }
 }
 
 @media all and (max-width: 1020px) {
-  /* line 311, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-text ul li {
     font-size: 1.66585em;
   }
 }
 
 @media all and (max-width: 836px) {
-  /* line 311, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-text ul li {
     font-size: 1.33673em;
   }
 }
 
 @media all and (max-width: 648px) {
-  /* line 311, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-text ul li {
     font-size: 1.01346em;
   }
 }
 
-/* line 319, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 349, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-text .arrow {
   margin-right: 20px;
   position: absolute;
@@ -1022,12 +1060,12 @@ p {
   right: 50px;
 }
 
-/* line 327, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 357, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-question {
   position: relative;
 }
 
-/* line 329, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 359, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-question h1 {
   text-align: left;
   margin: 0;
@@ -1035,7 +1073,7 @@ p {
   margin-left: 20px;
 }
 
-/* line 335, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 365, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-question h3 {
   text-align: left;
   margin: 5px 0 0 30px;
@@ -1045,41 +1083,41 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 335, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 365, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question h3 {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 335, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 365, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question h3 {
     font-size: 2.3em;
   }
 }
 
 @media all and (max-width: 1043px) {
-  /* line 335, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 365, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question h3 {
     font-size: 1.89552em;
   }
 }
 
 @media all and (max-width: 878px) {
-  /* line 335, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 365, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question h3 {
     font-size: 1.50403em;
   }
 }
 
 @media all and (max-width: 703px) {
-  /* line 335, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 365, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question h3 {
     font-size: 1.12645em;
   }
 }
 
-/* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 371, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-question .score-float {
   position: absolute;
   top: 60px;
@@ -1088,34 +1126,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 371, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .score-float {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 371, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .score-float {
     font-size: 1.6em;
   }
 }
 
 @media all and (max-width: 975px) {
-  /* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 371, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .score-float {
     font-size: 1.38977em;
   }
 }
 
 @media all and (max-width: 765px) {
-  /* line 341, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 371, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .score-float {
     font-size: 1.15618em;
   }
 }
 
-/* line 346, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 376, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-question .question {
   font-size: 1.85em;
   text-align: center;
@@ -1123,34 +1161,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 346, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 376, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .question {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 346, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 376, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .question {
     font-size: 1.85em;
   }
 }
 
 @media all and (max-width: 1005px) {
-  /* line 346, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 376, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .question {
     font-size: 1.55667em;
   }
 }
 
 @media all and (max-width: 811px) {
-  /* line 346, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 376, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .question {
     font-size: 1.26203em;
   }
 }
 
-/* line 350, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 380, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-question .timer {
   float: right;
   font-size: 1.65em;
@@ -1160,34 +1198,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 350, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 380, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .timer {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 350, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 380, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .timer {
     font-size: 1.65em;
   }
 }
 
 @media all and (max-width: 982px) {
-  /* line 350, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 380, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .timer {
     font-size: 1.42193em;
   }
 }
 
 @media all and (max-width: 775px) {
-  /* line 350, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 380, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .timer {
     font-size: 1.17591em;
   }
 }
 
-/* line 356, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 386, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-question .lives-count {
   float: left;
   position: absolute;
@@ -1198,39 +1236,39 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 356, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 386, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .lives-count {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 356, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 386, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .lives-count {
     font-size: 1.65em;
   }
 }
 
 @media all and (max-width: 982px) {
-  /* line 356, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 386, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .lives-count {
     font-size: 1.42193em;
   }
 }
 
 @media all and (max-width: 775px) {
-  /* line 356, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 386, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .lives-count {
     font-size: 1.17591em;
   }
 }
 
-/* line 363, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 393, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-question .lives-count i {
   color: #f48fb1;
 }
 
-/* line 366, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 396, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-question .answers {
   margin-top: 80px;
   padding: 20px 20px 0 20px;
@@ -1239,51 +1277,51 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 366, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 396, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .answers {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 366, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 396, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .answers {
     font-size: 1.85em;
   }
 }
 
 @media all and (max-width: 1005px) {
-  /* line 366, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 396, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .answers {
     font-size: 1.55667em;
   }
 }
 
 @media all and (max-width: 811px) {
-  /* line 366, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 396, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .who-said-question .answers {
     font-size: 1.26203em;
   }
 }
 
-/* line 371, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 401, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .who-said-question .answers p {
   padding: 20px;
 }
 
-/* line 377, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 407, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-text {
   margin: 0 auto;
   text-align: left;
   margin-top: 20px;
 }
 
-/* line 381, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 411, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-text ul {
   padding: 1S0px;
 }
 
-/* line 384, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 414, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-text ul li {
   padding-bottom: 30px;
   max-width: 600px;
@@ -1294,34 +1332,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 384, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 414, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-text ul li {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 384, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 414, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-text ul li {
     font-size: 1.75em;
   }
 }
 
 @media all and (max-width: 994px) {
-  /* line 384, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 414, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-text ul li {
     font-size: 1.48767em;
   }
 }
 
 @media all and (max-width: 794px) {
-  /* line 384, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 414, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-text ul li {
     font-size: 1.21788em;
   }
 }
 
-/* line 392, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 422, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-text .arrow {
   margin-right: 20px;
   position: absolute;
@@ -1329,12 +1367,12 @@ p {
   right: 50px;
 }
 
-/* line 400, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 430, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-question {
   position: relative;
 }
 
-/* line 402, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 432, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-question h1 {
   text-align: left;
   margin: 0;
@@ -1342,7 +1380,7 @@ p {
   margin-left: 20px;
 }
 
-/* line 408, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 438, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-question h3 {
   text-align: left;
   margin: 5px 0 0 30px;
@@ -1352,41 +1390,41 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 408, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 438, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question h3 {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 408, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 438, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question h3 {
     font-size: 2.3em;
   }
 }
 
 @media all and (max-width: 1043px) {
-  /* line 408, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 438, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question h3 {
     font-size: 1.89552em;
   }
 }
 
 @media all and (max-width: 878px) {
-  /* line 408, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 438, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question h3 {
     font-size: 1.50403em;
   }
 }
 
 @media all and (max-width: 703px) {
-  /* line 408, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 438, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question h3 {
     font-size: 1.12645em;
   }
 }
 
-/* line 414, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 444, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-question .score-float {
   position: absolute;
   top: 60px;
@@ -1395,34 +1433,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 414, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 444, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .score-float {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 414, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 444, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .score-float {
     font-size: 1.6em;
   }
 }
 
 @media all and (max-width: 975px) {
-  /* line 414, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 444, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .score-float {
     font-size: 1.38977em;
   }
 }
 
 @media all and (max-width: 765px) {
-  /* line 414, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 444, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .score-float {
     font-size: 1.15618em;
   }
 }
 
-/* line 419, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 449, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-question .question {
   font-size: 1.85em;
   text-align: center;
@@ -1430,34 +1468,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 419, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 449, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .question {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 419, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 449, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .question {
     font-size: 1.85em;
   }
 }
 
 @media all and (max-width: 1005px) {
-  /* line 419, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 449, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .question {
     font-size: 1.55667em;
   }
 }
 
 @media all and (max-width: 811px) {
-  /* line 419, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 449, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .question {
     font-size: 1.26203em;
   }
 }
 
-/* line 423, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 453, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-question .timer {
   float: right;
   font-size: 1.65em;
@@ -1467,34 +1505,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 423, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 453, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .timer {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 423, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 453, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .timer {
     font-size: 1.65em;
   }
 }
 
 @media all and (max-width: 982px) {
-  /* line 423, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 453, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .timer {
     font-size: 1.42193em;
   }
 }
 
 @media all and (max-width: 775px) {
-  /* line 423, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 453, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .timer {
     font-size: 1.17591em;
   }
 }
 
-/* line 429, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 459, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-question .lives-count {
   float: left;
   position: absolute;
@@ -1505,39 +1543,39 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 429, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 459, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .lives-count {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 429, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 459, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .lives-count {
     font-size: 1.65em;
   }
 }
 
 @media all and (max-width: 982px) {
-  /* line 429, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 459, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .lives-count {
     font-size: 1.42193em;
   }
 }
 
 @media all and (max-width: 775px) {
-  /* line 429, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 459, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .lives-count {
     font-size: 1.17591em;
   }
 }
 
-/* line 436, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 466, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-question .lives-count i {
   color: #f48fb1;
 }
 
-/* line 439, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 469, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-question .answers {
   margin-top: 80px;
   padding: 20px 20px 0 20px;
@@ -1546,56 +1584,56 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 439, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 469, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .answers {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 439, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 469, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .answers {
     font-size: 1.85em;
   }
 }
 
 @media all and (max-width: 1005px) {
-  /* line 439, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 469, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .answers {
     font-size: 1.55667em;
   }
 }
 
 @media all and (max-width: 811px) {
-  /* line 439, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 469, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .herstory-question .answers {
     font-size: 1.26203em;
   }
 }
 
-/* line 444, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 474, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .herstory-question .answers p {
   padding: 20px;
 }
 
-/* line 451, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 481, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform img {
   width: 80%;
 }
 
-/* line 454, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 484, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform .drag-transform-text {
   margin: 0 auto;
   text-align: left;
   margin-top: 40px;
 }
 
-/* line 458, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 488, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform .drag-transform-text ul {
   padding: 1S0px;
 }
 
-/* line 461, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 491, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform .drag-transform-text ul li {
   padding-bottom: 30px;
   max-width: 600px;
@@ -1606,34 +1644,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 461, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 491, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform .drag-transform-text ul li {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 461, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 491, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform .drag-transform-text ul li {
     font-size: 1.75em;
   }
 }
 
 @media all and (max-width: 994px) {
-  /* line 461, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 491, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform .drag-transform-text ul li {
     font-size: 1.48767em;
   }
 }
 
 @media all and (max-width: 794px) {
-  /* line 461, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 491, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform .drag-transform-text ul li {
     font-size: 1.21788em;
   }
 }
 
-/* line 469, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 499, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform .drag-transform-text .arrow {
   margin-right: 20px;
   position: absolute;
@@ -1641,12 +1679,12 @@ p {
   right: 50px;
 }
 
-/* line 478, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 508, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question {
   position: relative;
 }
 
-/* line 480, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 510, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question h1 {
   text-align: left;
   margin: 0;
@@ -1654,7 +1692,7 @@ p {
   margin-left: 20px;
 }
 
-/* line 486, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 516, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question h3 {
   text-align: left;
   margin: 5px 0 0 30px;
@@ -1664,41 +1702,41 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 486, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 516, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question h3 {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 486, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 516, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question h3 {
     font-size: 2.3em;
   }
 }
 
 @media all and (max-width: 1043px) {
-  /* line 486, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 516, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question h3 {
     font-size: 1.89552em;
   }
 }
 
 @media all and (max-width: 878px) {
-  /* line 486, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 516, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question h3 {
     font-size: 1.50403em;
   }
 }
 
 @media all and (max-width: 703px) {
-  /* line 486, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 516, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question h3 {
     font-size: 1.12645em;
   }
 }
 
-/* line 492, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 522, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question .score-float {
   position: absolute;
   top: 60px;
@@ -1707,34 +1745,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 492, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 522, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .score-float {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 492, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 522, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .score-float {
     font-size: 1.6em;
   }
 }
 
 @media all and (max-width: 975px) {
-  /* line 492, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 522, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .score-float {
     font-size: 1.38977em;
   }
 }
 
 @media all and (max-width: 765px) {
-  /* line 492, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 522, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .score-float {
     font-size: 1.15618em;
   }
 }
 
-/* line 497, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 527, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question .question {
   font-size: 1.85em;
   text-align: center;
@@ -1742,34 +1780,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 497, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 527, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .question {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 497, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 527, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .question {
     font-size: 1.85em;
   }
 }
 
 @media all and (max-width: 1005px) {
-  /* line 497, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 527, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .question {
     font-size: 1.55667em;
   }
 }
 
 @media all and (max-width: 811px) {
-  /* line 497, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 527, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .question {
     font-size: 1.26203em;
   }
 }
 
-/* line 501, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 531, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question .timer {
   float: right;
   font-size: 1.65em;
@@ -1779,34 +1817,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 501, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 531, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .timer {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 501, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 531, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .timer {
     font-size: 1.65em;
   }
 }
 
 @media all and (max-width: 982px) {
-  /* line 501, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 531, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .timer {
     font-size: 1.42193em;
   }
 }
 
 @media all and (max-width: 775px) {
-  /* line 501, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 531, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .timer {
     font-size: 1.17591em;
   }
 }
 
-/* line 507, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 537, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question .lives-count {
   float: left;
   position: absolute;
@@ -1817,39 +1855,39 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 507, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 537, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .lives-count {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 507, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 537, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .lives-count {
     font-size: 1.65em;
   }
 }
 
 @media all and (max-width: 982px) {
-  /* line 507, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 537, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .lives-count {
     font-size: 1.42193em;
   }
 }
 
 @media all and (max-width: 775px) {
-  /* line 507, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 537, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .lives-count {
     font-size: 1.17591em;
   }
 }
 
-/* line 514, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 544, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question .lives-count i {
   color: #f48fb1;
 }
 
-/* line 517, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 547, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question .answers {
   margin-top: 80px;
   padding: 20px 20px 0 20px;
@@ -1858,56 +1896,56 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 517, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 547, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .answers {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 517, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 547, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .answers {
     font-size: 1.85em;
   }
 }
 
 @media all and (max-width: 1005px) {
-  /* line 517, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 547, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .answers {
     font-size: 1.55667em;
   }
 }
 
 @media all and (max-width: 811px) {
-  /* line 517, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 547, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .drag-transform-question .answers {
     font-size: 1.26203em;
   }
 }
 
-/* line 522, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 552, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question .answers p {
   padding: 20px;
 }
 
-/* line 525, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 555, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .drag-transform-question .answers .smaller {
   max-width: 200px;
 }
 
-/* line 531, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 561, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .mix-all-text {
   margin: 0 auto;
   text-align: left;
   margin-top: 40px;
 }
 
-/* line 535, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 565, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .mix-all-text ul {
   padding: 1S0px;
 }
 
-/* line 538, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 568, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .mix-all-text ul li {
   padding-bottom: 30px;
   max-width: 600px;
@@ -1918,34 +1956,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 538, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 568, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .mix-all-text ul li {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 538, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 568, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .mix-all-text ul li {
     font-size: 1.75em;
   }
 }
 
 @media all and (max-width: 994px) {
-  /* line 538, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 568, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .mix-all-text ul li {
     font-size: 1.48767em;
   }
 }
 
 @media all and (max-width: 794px) {
-  /* line 538, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 568, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .mix-all-text ul li {
     font-size: 1.21788em;
   }
 }
 
-/* line 546, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 576, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .mix-all-text .arrow {
   margin-right: 20px;
   position: absolute;
@@ -1953,14 +1991,14 @@ p {
   right: 50px;
 }
 
-/* line 554, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 584, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .correct-text {
   margin: 0 auto;
   text-align: left;
   margin-top: 20px;
 }
 
-/* line 558, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 588, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .correct-text p {
   font-size: 2.5em;
   text-align: center;
@@ -1968,46 +2006,46 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 558, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 588, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .correct-text p {
     font-size: 1.2em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 558, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 588, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .correct-text p {
     font-size: 2.5em;
   }
 }
 
 @media all and (max-width: 1056px) {
-  /* line 558, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 588, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .correct-text p {
     font-size: 2.14343em;
   }
 }
 
 @media all and (max-width: 908px) {
-  /* line 558, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 588, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .correct-text p {
     font-size: 1.79303em;
   }
 }
 
 @media all and (max-width: 756px) {
-  /* line 558, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 588, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .correct-text p {
     font-size: 1.45012em;
   }
 }
 
-/* line 563, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 593, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .correct-text ul {
   padding: 1S0px;
 }
 
-/* line 566, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 596, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .correct-text ul li {
   padding-bottom: 20px;
   max-width: 600px;
@@ -2019,34 +2057,34 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 566, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 596, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .correct-text ul li {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 566, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 596, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .correct-text ul li {
     font-size: 1.75em;
   }
 }
 
 @media all and (max-width: 994px) {
-  /* line 566, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 596, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .correct-text ul li {
     font-size: 1.48767em;
   }
 }
 
 @media all and (max-width: 794px) {
-  /* line 566, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 596, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .correct-text ul li {
     font-size: 1.21788em;
   }
 }
 
-/* line 575, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 605, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .correct-text .arrow {
   margin-right: 20px;
   position: absolute;
@@ -2054,14 +2092,14 @@ p {
   right: 50px;
 }
 
-/* line 583, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 613, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .wrong-text {
   margin: 0 auto;
   text-align: left;
   margin-top: 20px;
 }
 
-/* line 587, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 617, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .wrong-text p {
   font-size: 2.5em;
   text-align: center;
@@ -2069,52 +2107,52 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 587, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 617, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .wrong-text p {
     font-size: 1.2em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 587, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 617, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .wrong-text p {
     font-size: 2.5em;
   }
 }
 
 @media all and (max-width: 1056px) {
-  /* line 587, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 617, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .wrong-text p {
     font-size: 2.14343em;
   }
 }
 
 @media all and (max-width: 908px) {
-  /* line 587, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 617, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .wrong-text p {
     font-size: 1.79303em;
   }
 }
 
 @media all and (max-width: 756px) {
-  /* line 587, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 617, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .wrong-text p {
     font-size: 1.45012em;
   }
 }
 
-/* line 592, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 622, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .wrong-text ul {
   padding: 1S0px;
 }
 
-/* line 594, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 624, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .wrong-text ul #lives-text {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-/* line 599, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 629, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .wrong-text ul li {
   padding-bottom: 20px;
   max-width: 600px;
@@ -2126,46 +2164,46 @@ p {
 }
 
 @media all and (max-width: 640px) {
-  /* line 599, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 629, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .wrong-text ul li {
     font-size: 1.2em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 599, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 629, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .wrong-text ul li {
     font-size: 2.4em;
   }
 }
 
 @media all and (max-width: 1050px) {
-  /* line 599, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 629, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .wrong-text ul li {
     font-size: 2.06484em;
   }
 }
 
 @media all and (max-width: 897px) {
-  /* line 599, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 629, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .wrong-text ul li {
     font-size: 1.73333em;
   }
 }
 
 @media all and (max-width: 742px) {
-  /* line 599, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 629, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .wrong-text ul li {
     font-size: 1.40814em;
   }
 }
 
-/* line 607, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 637, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .wrong-text ul li span i {
   color: #f48fb1;
 }
 
-/* line 611, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 641, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .wrong-text .arrow {
   margin-right: 20px;
   position: absolute;
@@ -2173,125 +2211,129 @@ p {
   right: 50px;
 }
 
-/* line 619, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 649, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .game-over-text {
   margin: 0 auto;
   text-align: left;
-  margin-top: 20px;
 }
 
-/* line 623, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 652, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .game-over-text p {
   font-size: 3.5em;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 @media all and (max-width: 640px) {
-  /* line 623, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 652, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text p {
     font-size: 1.2em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 623, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 652, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text p {
     font-size: 3.5em;
   }
 }
 
 @media all and (max-width: 1097px) {
-  /* line 623, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 652, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text p {
     font-size: 2.98941em;
   }
 }
 
 @media all and (max-width: 987px) {
-  /* line 623, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 652, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text p {
     font-size: 2.4877em;
   }
 }
 
 @media all and (max-width: 868px) {
-  /* line 623, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 652, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text p {
     font-size: 1.99562em;
   }
 }
 
 @media all and (max-width: 738px) {
-  /* line 623, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 652, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text p {
     font-size: 1.51828em;
   }
 }
 
-/* line 628, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 657, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .game-over-text ul {
   padding: 1S0px;
 }
 
-/* line 630, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 659, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .game-over-text ul #lives-text {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-/* line 635, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 664, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .game-over-text ul li {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   max-width: 600px;
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
   color: #757575;
   font-weight: 300;
-  font-size: 2.4em;
+  font-size: 2em;
 }
 
 @media all and (max-width: 640px) {
-  /* line 635, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 664, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text ul li {
     font-size: 1.2em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  /* line 635, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+  /* line 664, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text ul li {
-    font-size: 2.4em;
+    font-size: 2em;
   }
 }
 
-@media all and (max-width: 1050px) {
-  /* line 635, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+@media all and (max-width: 1020px) {
+  /* line 664, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text ul li {
-    font-size: 2.06484em;
+    font-size: 1.7683em;
   }
 }
 
-@media all and (max-width: 897px) {
-  /* line 635, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+@media all and (max-width: 847px) {
+  /* line 664, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text ul li {
-    font-size: 1.73333em;
+    font-size: 1.5229em;
   }
 }
 
-@media all and (max-width: 742px) {
-  /* line 635, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+@media all and (max-width: 680px) {
+  /* line 664, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
   .game-over-text ul li {
-    font-size: 1.40814em;
+    font-size: 1.26488em;
   }
 }
 
-/* line 643, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
-.game-over-text ul li span {
+/* line 672, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+.game-over-text ul li .dark {
   color: #f48fb1;
 }
 
-/* line 647, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+/* line 675, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
+.game-over-text ul li span {
+  color: #757575;
+}
+
+/* line 679, C:/Users/Phil/OneDrive/5. Programming/IronHack/Drag Quiz/Drag-Quiz/SCSS/style.scss */
 .game-over-text .arrow {
   margin-right: 20px;
   position: absolute;

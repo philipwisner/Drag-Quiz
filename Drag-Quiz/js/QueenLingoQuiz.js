@@ -1,94 +1,97 @@
 $(document).ready(function () {
-//Have this JS run when you click on the queen lingo category
 
+// When you click the next arrow on Queen-Lingo it takes you to the quiz
 $("#queen-lingo-quiz").on("click", function() {
 	clickSound.play();
 	$('.queen-lingo').addClass('hidden');
 	$('.queen-lingo-question').removeClass('hidden');
 	generateHTML();
 	timerWrapper();
-}); // Closes start-button click
+}); 
 
+	
+// This checks if the answer is correct after user clicks
 $("body").on("click", ".answer", function(event){
-	//answeredQuestion = true;
 	clickSound.play();
 	selectedAnswer = $(this).text();
 	if(selectedAnswer === correctAnswersQueenLingo[questionCounter]) {
-		//alert("correct");
-
 		clearInterval(theClock);
 		generateWin();
 	}
 	else {
-		//alert("wrong answer!");
 		clearInterval(theClock);
 		generateLoss();
 	}
-}); // Close .answer click
-
+}); 
+	
+//Click on restart button to go back to category card
 $("body").on("click", ".reset-button", function(event) {
 	clickSound.play();
 	resetGame();
-}); // Closes reset-button click
+}); 
 
-});  //  Closes jQuery wrapper
+});
 
+//Funcction that generates a loss due to not answering in time
 function generateLossDueToTimeOut() {
+	lives -= 1;
 	unansweredTally++;
-	lives -= 1;
-	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswersQueenLingo[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='img/x.png'>";
-	$(".mainArea").html(gameHTML);
-	setTimeout(wait, 3000);  //  change to 4000 or other amount
-}
-
-function generateWin() {
-	correctTally += counter;
-	gameHTML = "<div class='card correct'><h1>CORRECT</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + imageArrayCorrect[questionCounter] + "</div><div class='correct-text col s12 m12 l6 xl6'><p>CONDRAGULATIONS! You Guessed Right</p><ul><li><b class='bold'>TIME</b> <span>" + counter + "s</span></li><li><b class='bold'>SCORE</b> <span>" + counter + "pts</span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='correct-next'><i class='material-icons'>navigate_next</i></a></div></div></div>";
-	$(".correct").removeClass('hidden');
-	$(".queen-lingo-question").addClass('hidden');
-	$(".correct").html(gameHTML);
-	$("#correct-next").on('click', function(){
-		$(".correct").addClass('hidden');
-		$(".queen-lingo-question").removeClass('hidden');
-		setTimeout(wait, 0);  //  change to 4000 or other amount
-	})
-}
-
-function generateLoss() {
-	lives -= 1;
-	incorrectTally++;
-	gameHTML = "<div class='card wrong'><h1>WRONG</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + imageArrayWrong[questionCounter] +
-	"</div><div class='wrong-text col s12 m12 l6 xl6'><p>SASHAY AWAY! You lost a life!</p><ul><li id='lives-text'><b class='bold'>LIVES </b>" + lives + "</li><li><span><i class='material-icons small'>favorite</i></span><span><i class='material-icons small'>favorite</i></span><span><i class='material-icons small'>favorite</i></span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='wrong-next'><i class='material-icons'>navigate_next</i></a></div></div></div>";
+	gameHTML = "<h1>OUT OF TIME</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + imageArrayWrong[questionCounter] +
+	"</div><div class='wrong-text col s12 m12 l6 xl6'><p>SASHAY AWAY! You lost a life!</p><ul><li id='lives-text'><b class='bold'>LIVES </b>" + lives + "</li><li><span><i class='material-icons small'>favorite</i></span><span><i class='material-icons small'>favorite</i></span><span><i class='material-icons small'>favorite</i></span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='wrong-next'><i class='material-icons'>navigate_next</i></a></div></div>";
 	$(".wrong").removeClass('hidden');
 	$(".queen-lingo-question").addClass('hidden');
 	$(".wrong").html(gameHTML);
 	$("#wrong-next").on('click', function(){
 		$(".wrong").addClass('hidden');
 		$(".queen-lingo-question").removeClass('hidden');
-		setTimeout(wait, 0); //  change to 4000 or other amount
+		setTimeout(wait, 0); 
 	})
 }
 
-//function generateLoss() {
-//	lives -= 1;
-//	incorrectTally++;
-//	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswersQueenLingo[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='img/wrong.gif'>";
-//	$(".mainArea").html(gameHTML);
-//	setTimeout(wait, 1000); //  change to 4000 or other amount
-//}
-
-
-function generateHTML() {
-		gameHTML = "<div class='card queen-lingo-question'><h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + questionCounter + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + questionQueenLingo[questionCounter] + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'>10</span></p><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + "</li><li><span><i class='material-icons'>favorite</i></span><span><i class='material-icons'>favorite</i></span><span><i class='material-icons'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + answersQueenLingo[questionCounter][0] + "</p><p class='answer'>" + answersQueenLingo[questionCounter][1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + answersQueenLingo[questionCounter][2] + "</p><p class='answer'>" + answersQueenLingo[questionCounter][3] + "</p></div></div></div>";
-		$(".queen-lingo-question").html(gameHTML);
+//Function to Generate the Correct Card
+function generateWin() {
+	correctTally += counter;
+	gameHTML = "<h1>CORRECT</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + imageArrayCorrect[questionCounter] + "</div><div class='correct-text col s12 m12 l6 xl6'><p>CONDRAGULATIONS! You Guessed Right</p><ul><li><b class='bold'>TIME</b> <span>" + counter + "s</span></li><li><b class='bold'>SCORE</b> <span>" + counter + "pts</span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='correct-next'><i class='material-icons'>navigate_next</i></a></div></div>";
+	$(".correct").removeClass('hidden');
+	$(".queen-lingo-question").addClass('hidden');
+	$(".correct").html(gameHTML);
+	$("#correct-next").on('click', function(){
+		$(".correct").addClass('hidden');
+		$(".queen-lingo-question").removeClass('hidden');
+		setTimeout(wait, 0); 
+	})
 }
 
 
+//Function to Generate the Wrong Card
+function generateLoss() {
+	lives -= 1;
+	incorrectTally++;
+	gameHTML = "<h1>WRONG</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + imageArrayWrong[questionCounter] +
+	"</div><div class='wrong-text col s12 m12 l6 xl6'><p>SASHAY AWAY! You lost a life!</p><ul><li id='lives-text'><b class='bold'>LIVES </b>" + lives + "</li><li><span><i class='material-icons small'>favorite</i></span><span><i class='material-icons small'>favorite</i></span><span><i class='material-icons small'>favorite</i></span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='wrong-next'><i class='material-icons'>navigate_next</i></a></div></div>";
+	$(".wrong").removeClass('hidden');
+	$(".queen-lingo-question").addClass('hidden');
+	$(".wrong").html(gameHTML);
+	$("#wrong-next").on('click', function(){
+		$(".wrong").addClass('hidden');
+		$(".queen-lingo-question").removeClass('hidden');
+		setTimeout(wait, 0); 
+	})
+}
+
+
+//Function to generate the Question Card
+function generateHTML() {
+		gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + questionCounter + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + questionQueenLingo[questionCounter] + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'>15</span></p><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + "</li><li><span><i class='material-icons'>favorite</i></span><span><i class='material-icons'>favorite</i></span><span><i class='material-icons'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + answersQueenLingo[questionCounter][0] + "</p><p class='answer'>" + answersQueenLingo[questionCounter][1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + answersQueenLingo[questionCounter][2] + "</p><p class='answer'>" + answersQueenLingo[questionCounter][3] + "</p></div></div>";
+		$(".queen-lingo-question").html(gameHTML);
+}
+
+//Function to check if tehre are still questions left to ask
 function wait() {
-	if (questionCounter < questionQueenLingo.length - 1) {
+	if (questionCounter < questionQueenLingo.length - 1 && lives > 0) {
 	questionCounter++;
 	generateHTML();
-	counter = 10;
+	counter = 15;
 	timerWrapper();
 	}
 	else {
@@ -96,9 +99,20 @@ function wait() {
 	}
 }
 
+
+//Function to check if there are still lives left
+function checkLives() {
+	if (lives <= 0) {
+		finalScreen();
+	} else {
+		wait();
+	}
+}
+
+//Function to create the 10s timer
 function timerWrapper() {
-	theClock = setInterval(tenSeconds, 1000);
-	function tenSeconds() {
+	theClock = setInterval(selectSeconds, 1000);
+	function selectSeconds() {
 		if (counter === 0) {
 			clearInterval(theClock);
 			generateLossDueToTimeOut();
@@ -110,11 +124,39 @@ function timerWrapper() {
 	}
 }
 
+//Function to display restart screen
 function finalScreen() {
-	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctTally + "</p>" + "<p>Wrong Answers: " + incorrectTally + "</p>" + "<p>Unanswered: " + unansweredTally + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
-	$(".queen-lingo-question").removeClass('hidden');
-	$(".queen-lingo-question").html(gameHTML);
+	gameHTML = "<h1>GAME OVER</h1><div class='row'><div class='col s12 m12 l6 xl6'><img src='img/byeGirl.gif' class='responsive-img image-center'></div><div class='game-over-text col s12 m12 l6 xl6'><p>BYE GIRL BYE!</p><ul><li><b class='bold'>Incorrect</b> <span>" + incorrectTally + "</span><li><li><b class='bold'>Unanswered</b> <span>" + unansweredTally + "</span><li><li><b class='bold dark'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow'><i class='material-icons'>navigate_next</i></a></div></div>";
+	$(".game-over").removeClass('hidden');
+	$(".queen-lingo-question").addClass('hidden');
+	$(".game-over").html(gameHTML);
+//	$("#correct-next").on('click', function(){
+//		$(".correct").addClass('hidden');
+//		$(".queen-lingo-question").removeClass('hidden');
+//		setTimeout(wait, 0); 
+//	})
 }
+
+
+
+
+
+
+
+//display is messed up
+//show number of questions correct
+//show numner of questions incorrect
+//show number of questions unanswered
+
+			
+//
+//function finalScreen() {
+//	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctTally + "</p>" + "<p>Wrong Answers: " + incorrectTally + "</p>" + "<p>Unanswered: " + unansweredTally + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
+//	$(".queen-lingo-question").removeClass('hidden');
+//	$(".queen-lingo-question").html(gameHTML);
+//}
+
+
 
 function resetGame() {
 	questionCounter = 1;
@@ -122,7 +164,7 @@ function resetGame() {
 	incorrectTally = 0;
 	unansweredTally = 0;
 	lives = 5;
-	counter = 10;
+	counter = 15;
 	generateHTML();
 	timerWrapper();
 }
@@ -131,7 +173,7 @@ function resetGame() {
 
 var startScreen;
 var gameHTML;
-var counter = 10;
+var counter = 15;
 var questionQueenLingo = [
 	"",
 	"What does fishy mean?",
@@ -225,7 +267,22 @@ var imageArrayCorrect = ["",
 									"<img class='img-responsive img-center' src='img/tuck.gif'>",
 									"<img class='img-responsive img-center' src='img/kaikai.gif'>",
 									"<img class='img-responsive img-center' src='img/cakes.gif'>",
-									"<img class='img-responsive img-center' src='img/biscuit.gif'>"
+									"<img class='img-responsive img-center' src='img/biscuit.gif'>",
+									"<img class='img-responsive img-center' src='img/cheesecake.gif'>",
+									"<img class='img-responsive img-center' src='img/trade.gif'>",
+									"<img class='img-responsive img-center' src='img/shade.gif'>",
+									"<img class='img-responsive img-center' src='img/clocked.gif'>",
+									"<img class='img-responsive img-center' src='img/faux.gif'>",
+									"<img class='img-responsive img-center' src='img/feelingOats.gif'>",
+									"<img class='img-responsive img-center' src='img/5gs.gif'>",
+									"<img class='img-responsive img-center' src='img/gods.gif'>",
+									"<img class='img-responsive img-center' src='img/forDays.gif'>",
+									"<img class='img-responsive img-center' src='img/hunty.gif'>",
+									"<img class='img-responsive img-center' src='img/DeathDrop.gif'>",
+									"<img class='img-responsive img-center' src='img/mug.gif'>",
+									"<img class='img-responsive img-center' src='img/readFilth.gif'>",
+									"<img class='img-responsive img-center' src='img/sickening.gif'>",
+									"<img class='img-responsive img-center' src='img/squirrel.gif'>",
 								 ];
 
 var imageArrayWrong = ["",
@@ -235,30 +292,28 @@ var imageArrayWrong = ["",
 									"<img class='img-responsive img-center' src='img/fail4.gif'>",
 									"<img class='img-responsive img-center' src='img/fail5.gif'>",
 									"<img class='img-responsive img-center' src='img/fail6.gif'>",
+									"<img class='img-responsive img-center' src='img/fail7.gif'>",
+									"<img class='img-responsive img-center' src='img/fail8.gif'>",
 									"<img class='img-responsive img-center' src='img/fail1.gif'>",
 									"<img class='img-responsive img-center' src='img/fail2.gif'>",
 									"<img class='img-responsive img-center' src='img/fail3.gif'>",
 									"<img class='img-responsive img-center' src='img/fail4.gif'>",
 									"<img class='img-responsive img-center' src='img/fail5.gif'>",
 									"<img class='img-responsive img-center' src='img/fail6.gif'>",
+									"<img class='img-responsive img-center' src='img/fail7.gif'>",
+									"<img class='img-responsive img-center' src='img/fail8.gif'>",
 									"<img class='img-responsive img-center' src='img/fail1.gif'>",
 									"<img class='img-responsive img-center' src='img/fail2.gif'>",
 									"<img class='img-responsive img-center' src='img/fail3.gif'>",
 									"<img class='img-responsive img-center' src='img/fail4.gif'>",
 									"<img class='img-responsive img-center' src='img/fail5.gif'>",
 									"<img class='img-responsive img-center' src='img/fail6.gif'>",
+									"<img class='img-responsive img-center' src='img/fail7.gif'>",
+									"<img class='img-responsive img-center' src='img/fail8.gif'>",
 									"<img class='img-responsive img-center' src='img/fail1.gif'>",
 									"<img class='img-responsive img-center' src='img/fail2.gif'>",
 									"<img class='img-responsive img-center' src='img/fail3.gif'>",
 									"<img class='img-responsive img-center' src='img/fail4.gif'>",
-									"<img class='img-responsive img-center' src='img/fail5.gif'>",
-									"<img class='img-responsive img-center' src='img/fail6.gif'>",
-									"<img class='img-responsive img-center' src='img/fail1.gif'>",
-									"<img class='img-responsive img-center' src='img/fail2.gif'>",
-									"<img class='img-responsive img-center' src='img/fail3.gif'>",
-									"<img class='img-responsive img-center' src='img/fail4.gif'>",
-									"<img class='img-responsive img-center' src='img/fail5.gif'>",
-									"<img class='img-responsive img-center' src='img/fail6.gif'>"
 								 ];
 
 var questionCounter = 1;

@@ -5,6 +5,7 @@ $accent-color: #f48fb1;
 $heading-color: #616161;
 $main-text-color: #757575;
 $main-text-weight: 300;
+$bolder-text-weight: 700;
 
 * {
 	box-sizing: border-box;
@@ -21,6 +22,33 @@ body {
 .hidden {
 	display: none;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
 
 h1 {
 	text-align: center;
@@ -129,7 +157,7 @@ p {
 		border-radius: 3px;
 		}
 		p {
-		@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.5em);
+		@include responsive-font-size (1em, 2em, 640px, 1200px, 0.5em);
 		color: white;
 		font-weight: 400;
 		}
@@ -189,9 +217,10 @@ p {
 		@include responsive-font-size (1em, 1.6em, 640px, 1200px, 0.3em);
 	}
 	.question {
-		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
+		@include responsive-font-size (1em, 2em, 640px, 1200px, 0.3em);
 		text-align: center;
 		margin: 20px 0;
+		font-weight: $bolder-text-weight;
 	}
 	.timer {
 		float: right;
@@ -219,6 +248,7 @@ p {
 			&:hover {
 				color: $accent-color;
 				cursor: pointer;
+				cursor: hand;
 				font-weight: 700;
 			}
 		}
@@ -619,11 +649,10 @@ p {
 .game-over-text {
 	margin: 0 auto;
 	text-align: left;
-	margin-top: 20px;
 	p {
 		@include responsive-font-size (1.2em, 3.5em, 640px, 1200px, 0.3em);
 		text-align: center;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 	}
 	ul {
 		padding: 1S0px;
@@ -633,15 +662,18 @@ p {
 		}
 	}
 	ul li {
-		padding-bottom: 20px;
+		padding-bottom: 10px;
 		max-width: 600px;
-		text-align: center;
+		text-align: left;
 		margin: 0 auto;
 		color: $main-text-color;
 		font-weight: $main-text-weight;
-		@include responsive-font-size (1.2em, 2.4em, 640px, 1200px, 0.3em);
-		span {
+		@include responsive-font-size (1.2em, 2em, 640px, 1200px, 0.3em);
+		.dark {
 			color: $accent-color;
+		}
+		span {
+			color: $main-text-color;
 		}
 		}
 	.arrow {

@@ -116,6 +116,11 @@
 
 <!--QUEEN LINGO QUESTION CARD-->
 		<div class="card queen-lingo-question hidden">
+		</div>
+		
+<!--QUEEN LINGO QUESTION CARD-->
+<!--
+		<div class="card queen-lingo-question hidden">
 			<h1>QUEEN LINGO</h1>
 			<h3>Question <span>1</span></h3>
 			<p class="score-float"><b class="bold">SCORE</b> <span>0</span>pts</p>
@@ -140,7 +145,8 @@
 					<p>OPTION 4</p>
 				</div>
 			</div>
-		</div>
+		</div>		
+-->
 
 <!--NAME THAT QUEEN CARD-->
 		<div class="card name-queen hidden">
@@ -376,6 +382,9 @@
 
 <!--WRONG CARD-->
 		<div class="card wrong hidden">
+		</div>
+<!--
+		<div class="card wrong hidden">
 			<h1>WRONG</h1>
 			<div class="row">
 				<div class="col s12 m12 l6 xl6">
@@ -397,7 +406,7 @@
   				</a>
 				</div>
 			</div>
-		</div>
+-->
 
 <!--GAME OVER CARD-->
 		<div class="card game-over hidden">
@@ -409,7 +418,10 @@
 				<div class="game-over-text col s12 m12 l6 xl6">
 					<p>BYE GIRL BYE!</p>
 				<ul>
-					<li><b class="bold">TOTAL</b> <span></span><li>
+					<li><b class="bold">CORRECT</b> <span></span><li>
+					<li><b class="bold">INCORRECT</b> <span></span><li>
+					<li><b class="bold">UNANSWERED</b> <span></span><li>
+					<li><b class="bold dark">TOTAL</b> <span></span><li>
 				</ul>
   				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
   					<i class="material-icons">navigate_next</i>
@@ -420,16 +432,15 @@
 		
 <!--Fixed Bottom Button Navigation -->
 		<div class="fixed-action-btn horizontal click-to-toggle">
-			<a class="btn-floating btn-large pink lighten-3">
+			<a class="btn-floating btn-large pink lighten-3" title="Navigation Toggle">
 				<i class="material-icons">menu</i>
 			</a>
 			<ul>
-				<li><a class="btn-floating pink darken-2" id="categories"><i class="material-icons">apps</i></a></li>
-				<li><a class="btn-floating pink lighten-1" id="instructions"><i class="material-icons">info_outline</i></a></li>
-				<li><a class="btn-floating pink lighten-3" id="home"><i class="material-icons">home</i></a></li>
+				<li><a class="btn-floating pink darken-2" id="categories" title="Select Category"><i class="material-icons">apps</i></a></li>
+				<li><a class="btn-floating pink lighten-1" id="instructions"><i class="material-icons" title="Instructions">info_outline</i></a></li>
+				<li><a class="btn-floating pink lighten-3" id="home" title="Home"><i class="material-icons">home</i></a></li>
 			</ul>
 		</div>
-        
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

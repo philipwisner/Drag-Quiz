@@ -1,14 +1,9 @@
 FLOW
 - Once user hits next on category splash the quiz will begin
-- Use the same card layout for the entire quiz
-	- Change the question number for each questions
 	- Update the score with each card
-	- Change the questions and options
-	- Update the lives is necessary
-	- Lower the timer after 3 correct answers
+	- Randmoize the questions and options
+	- Lower the timer after 5 correct answers
 - Once the user clicks on an answer:
-	- Check if correct if so take them to the correct card layout
-	- If incorrect take them to incorrect card layout displaying correct answer
 - Game ends once they run out of questions or lives
 - On game end, the total score is displayed.
 
