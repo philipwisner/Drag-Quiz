@@ -36,6 +36,7 @@ $("body").on("click", ".reset-button", function(event) {
 function generateLossDueToTimeOut() {
 	lives -= 1;
 	unansweredTally++;
+	counter = counter;
 	gameHTML = "<h1>OUT OF TIME</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + imageArrayWrong[questionCounter] +
 	"</div><div class='wrong-text col s12 m12 l6 xl6'><p>SASHAY AWAY! You lost a life!</p><ul><li id='lives-text'><b class='bold'>LIVES </b>" + lives + "</li><li><span><i class='material-icons small'>favorite</i></span><span><i class='material-icons small'>favorite</i></span><span><i class='material-icons small'>favorite</i></span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='wrong-next'><i class='material-icons'>navigate_next</i></a></div></div>";
 	$(".wrong").removeClass('hidden');
@@ -51,6 +52,7 @@ function generateLossDueToTimeOut() {
 //Function to Generate the Correct Card
 function generateWin() {
 	correctTally += counter;
+	counter -= 1;
 	gameHTML = "<h1>CORRECT</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + imageArrayCorrect[questionCounter] + "</div><div class='correct-text col s12 m12 l6 xl6'><p>CONDRAGULATIONS! You Guessed Right</p><ul><li><b class='bold'>TIME</b> <span>" + counter + "s</span></li><li><b class='bold'>SCORE</b> <span>" + counter + "pts</span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='correct-next'><i class='material-icons'>navigate_next</i></a></div></div>";
 	$(".correct").removeClass('hidden');
 	$(".queen-lingo-question").addClass('hidden');
@@ -67,8 +69,9 @@ function generateWin() {
 function generateLoss() {
 	lives -= 1;
 	incorrectTally++;
+	counter = counter;
 	gameHTML = "<h1>WRONG</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + imageArrayWrong[questionCounter] +
-	"</div><div class='wrong-text col s12 m12 l6 xl6'><p>SASHAY AWAY! You lost a life!</p><ul><li id='lives-text'><b class='bold'>LIVES </b>" + lives + "</li><li><span><i class='material-icons small'>favorite</i></span><span><i class='material-icons small'>favorite</i></span><span><i class='material-icons small'>favorite</i></span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='wrong-next'><i class='material-icons'>navigate_next</i></a></div></div>";
+	"</div><div class='wrong-text col s12 m12 l6 xl6'><p>SASHAY AWAY! You lost a life!</p><ul><li id='lives-text'><b class='bold'>LIVES </b>" + lives + "</li><li><span></span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='wrong-next'><i class='material-icons'>navigate_next</i></a></div></div>";
 	$(".wrong").removeClass('hidden');
 	$(".queen-lingo-question").addClass('hidden');
 	$(".wrong").html(gameHTML);
@@ -82,22 +85,25 @@ function generateLoss() {
 
 //Function to generate the Question Card
 function generateHTML() {
-		gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + questionCounter + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + questionQueenLingo[questionCounter] + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'>15</span></p><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + "</li><li><span><i class='material-icons'>favorite</i></span><span><i class='material-icons'>favorite</i></span><span><i class='material-icons'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + answersQueenLingo[questionCounter][0] + "</p><p class='answer'>" + answersQueenLingo[questionCounter][1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + answersQueenLingo[questionCounter][2] + "</p><p class='answer'>" + answersQueenLingo[questionCounter][3] + "</p></div></div>";
+		gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + questionCounter + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + questionQueenLingo[questionCounter] + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'>15</span>s</p><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + "</li><li><span><i class='material-icons'>favorite</i></span><span><i class='material-icons'>favorite</i></span><span><i class='material-icons'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + answersQueenLingo[questionCounter][0] + "</p><p class='answer'>" + answersQueenLingo[questionCounter][1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + answersQueenLingo[questionCounter][2] + "</p><p class='answer'>" + answersQueenLingo[questionCounter][3] + "</p></div></div>";
 		$(".queen-lingo-question").html(gameHTML);
 }
 
-//Function to check if tehre are still questions left to ask
+//Function to check if there are still questions left to ask
 function wait() {
 	if (questionCounter < questionQueenLingo.length - 1 && lives > 0) {
 	questionCounter++;
 	generateHTML();
-	counter = 15;
+//	counter = 15;
 	timerWrapper();
 	}
 	else {
 		finalScreen();
 	}
 }
+
+	//counter = counter - Math.floor(((counter + 10) / (questionQueenLingo.length)));
+
 
 
 //Function to check if there are still lives left
@@ -109,7 +115,39 @@ function checkLives() {
 	}
 }
 
-//Function to create the 10s timer
+
+
+function displayHearts(lives) {
+var heartIcons = "";
+	switch(lives) {
+		case 5:
+			heartIcons = "<i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i>";
+			return heartIcons;
+			break;
+		case 4:
+			heartIcons = "<i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i>";
+			return heartIcons;
+			break;
+		case 3:
+			heartIcons = "<i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i>";
+			return heartIcons;
+			break;
+		case 2:
+			heartIcons = "<i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i>";
+			return heartIcons;
+			break;
+		case 1:
+			heartIcons = "<i class='material-icons small'>favorite</i>";
+			return heartIcons;
+			break;
+		default:
+			return heartIcons;
+			break;
+	}
+}
+
+
+//Function to create the 15s timer
 function timerWrapper() {
 	theClock = setInterval(selectSeconds, 1000);
 	function selectSeconds() {
@@ -124,39 +162,20 @@ function timerWrapper() {
 	}
 }
 
-//Function to display restart screen
+
+
+//Function to display gameover screen
 function finalScreen() {
-	gameHTML = "<h1>GAME OVER</h1><div class='row'><div class='col s12 m12 l6 xl6'><img src='img/byeGirl.gif' class='responsive-img image-center'></div><div class='game-over-text col s12 m12 l6 xl6'><p>BYE GIRL BYE!</p><ul><li><b class='bold'>Incorrect</b> <span>" + incorrectTally + "</span><li><li><b class='bold'>Unanswered</b> <span>" + unansweredTally + "</span><li><li><b class='bold dark'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow'><i class='material-icons'>navigate_next</i></a></div></div>";
+	gameHTML = "<h1>GAME OVER</h1><div class='row'><div class='col s12 m12 l6 xl6'><img src='img/byeGirl.gif' class='responsive-img image-center'></div><div class='game-over-text col s12 m12 l6 xl6'><p>BYE GIRL BYE!</p><ul><li><b class='bold'>Incorrect</b> <span>" + incorrectTally + "</span><li><li><b class='bold'>Unanswered</b> <span>" + unansweredTally + "</span><li><li><b class='bold dark'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='game-over-btn'><i class='material-icons'>navigate_next</i></a></div></div>";
 	$(".game-over").removeClass('hidden');
 	$(".queen-lingo-question").addClass('hidden');
 	$(".game-over").html(gameHTML);
-//	$("#correct-next").on('click', function(){
-//		$(".correct").addClass('hidden');
-//		$(".queen-lingo-question").removeClass('hidden');
-//		setTimeout(wait, 0); 
-//	})
+	resetGame();
+	$("#game-over-btn").on('click', function() {
+		$('.game-over').addClass('hidden');
+		$('.category').removeClass('hidden');
+	})
 }
-
-
-
-
-
-
-
-//display is messed up
-//show number of questions correct
-//show numner of questions incorrect
-//show number of questions unanswered
-
-			
-//
-//function finalScreen() {
-//	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctTally + "</p>" + "<p>Wrong Answers: " + incorrectTally + "</p>" + "<p>Unanswered: " + unansweredTally + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
-//	$(".queen-lingo-question").removeClass('hidden');
-//	$(".queen-lingo-question").html(gameHTML);
-//}
-
-
 
 function resetGame() {
 	questionCounter = 1;
@@ -165,8 +184,6 @@ function resetGame() {
 	unansweredTally = 0;
 	lives = 5;
 	counter = 15;
-	generateHTML();
-	timerWrapper();
 }
 
 
@@ -185,7 +202,7 @@ var questionQueenLingo = [
 	"What does kai kai mean?",
 	"What do cakes refer to?",
 	"Jesus is a biscuit....",
-	"What does serving cheescake mean?",
+	"What does serving cheesecake mean?",
 	"What does trade mean?",
 	"What does shade mean?",
 	"What does clocking someone mean?",

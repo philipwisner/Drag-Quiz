@@ -1,11 +1,6 @@
 FLOW
-- Once user hits next on category splash the quiz will begin
-	- Update the score with each card
-	- Randmoize the questions and options
-	- Lower the timer after 5 correct answers
-- Once the user clicks on an answer:
-- Game ends once they run out of questions or lives
-- On game end, the total score is displayed.
+- Randmoize the questions and options
+- Lower the timer after correct answers
 
 
 Iteration 1
@@ -15,31 +10,16 @@ Iteration 1
 - Generate random questions
 - Do not let questions repeat
 - Generate random other answers for other options
-
-Iteration 2
 - Make sure the answers are not showing up in the same position 
 - Validate if user selected correct or incorrect answer
-- Create a total score that updates only when correct answer
-- Remove one life if answer is incorrect
 - If incorrect display correct answer
-- If there are 0 lives, end the game
 - Display final score after game end
-
-
-Iteration 3
-- Create a 10 second countdown timer 
 - Have the timer decrease in time after a certain amount of questions or correct answers
-- If correct add points based off of how much time passed.
-- If incorrect add 0 points and remove one life. 
-
 
 -Design
--Add gifs and sound effects depending on if correct or wrong
-
+-Sound effects depending on if correct or wrong
 
 - Also store multiple text reponses in an array that can be randomly used
-- Have random gifs be assigned when you get the question wrong
-
 
 DRAG LINGO, DRAG FACTS:
 -These need to have fixed answers with each question not random
@@ -48,3 +28,5 @@ NAME THAT QUEEN, WHO SAID IT:
 -Can have random queens be the other 3 answers.
 
 DRAG TRANSFORMATIONS:
+
+

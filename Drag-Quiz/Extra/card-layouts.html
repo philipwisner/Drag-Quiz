@@ -13,14 +13,11 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
   <script  src="https://use.fontawesome.com/a79a49a453.js"></script>
-<!--
-  <script src="js/questionData.js"></script>
-  <script src="js/quiz.js"></script>
--->
+
 </head>
 <body>
 	<div class="background valign-wrapper">
-	
+
 <!--WELCOME CARD-->
 		<div class="card welcome .hidden">
 			<h1>Welcome to Drag Quiz</h1>
@@ -45,8 +42,8 @@
 				<div class="instruction-text col s12 m12 l6 xl6">
 				<ul>
 					<li>Pick a Category of Trivia related to Drag Queens.</li>
-					<li>Once the game starts a timer will count down from 15 seconds and your score will be based on how fast you answer the question.</li>
-					<li>But beware, as you answer more questions correctly, the timer will get shorter.</li>
+					<li>Once the game starts a timer will count down from 10 seconds and your score will be based on how fast you answer the question.</li>
+					<li>But beware, as you answer more questions correctly, you will have less time to answer the questions.</li>
 					<li>You only have 5 lives, so answer carefully.</li>
 				</ul>
   				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow" id="instructions-next">
@@ -90,9 +87,9 @@
 				<a href=# id="btn-mix-all">
 					<div class="col s12 m12 l3 xl3 cat-item">
 						<p>Mix All Decks</p>
-					</div>		
+					</div>
 				</a>
-			</div>			
+			</div>
 			</div>
 
 <!--QUEEN LINGO CARD-->
@@ -115,7 +112,32 @@
 		</div>
 
 <!--QUEEN LINGO QUESTION CARD-->
-		<div class="card queen-lingo-question hidden"></div>
+		<div class="card queen-lingo-question hidden">
+			<h1>QUEEN LINGO</h1>
+			<h3>Question <span>1</span></h3>
+			<p class="score-float"><b class="bold">SCORE</b> <span>0</span>pts</p>
+			<p class="question">Question: <span></span></p>
+			<p class="timer"><b class="bold">TIMER</b> <span></span></p>
+			<ul class="lives-count">
+				<li id="lives-text"><b class="bold">LIVES</b>
+				</li>
+				<li>
+					<span><i class="material-icons">favorite</i></span>
+					<span><i class="material-icons">favorite</i></span>
+					<span><i class="material-icons">favorite</i></span>
+				</li>
+			</ul>
+			<div class="row answers">
+				<div class="col s12 m12 l6 xl6">
+					<p>OPTION 1</p>
+					<p>OPTION 2</p>
+				</div>
+				<div class="col s12 m12 l6 xl6">
+					<p>OPTION 3</p>
+					<p>OPTION 4</p>
+				</div>
+			</div>
+		</div>
 
 <!--NAME THAT QUEEN CARD-->
 		<div class="card name-queen hidden">
@@ -128,7 +150,7 @@
 				<ul>
 					<li>You will shown a picture of a famous drag queen and four potential answers. </li>
 					<li>Make sure you chose the right one.</li>
-					<li>Because Queens don't like it when you don't know their name!</li>	
+					<li>Because Queens don't like it when you don't know their name!</li>
 				</ul>
   				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
   					<i class="material-icons">navigate_next</i>
@@ -176,7 +198,7 @@
 				<ul>
 					<li>So you are already a master of drag queen lingo. </li>
 					<li>Well let's see how well you know your queens.</li>
-					<li>Select the correct queen who is known for saying the following quotes.</li>	
+					<li>Select the correct queen who is known for saying the following quotes.</li>
 				</ul>
   				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
   					<i class="material-icons">navigate_next</i>
@@ -232,7 +254,7 @@
 				</div>
 			</div>
 		</div>
- 
+
 <!--DRAG HERSTORY QUESTION CARD-->
 		<div class="card herstory-question hidden">
 			<h1>DRAG HERSTORY</h1>
@@ -259,8 +281,8 @@
 					<p>OPTION 4</p>
 				</div>
 			</div>
-		</div> 
-    
+		</div>
+
 <!--DRAG TRANSFORMATIONS CARD-->
 		<div class="card drag-transform hidden">
 			<h1>Drag Transformations</h1>
@@ -331,35 +353,82 @@
 
 <!--CORRECT CARD-->
 		<div class="card correct hidden">
+			<h1>CORRECT</h1>
+			<div class="row">
+				<div class="col s12 m12 l6 xl6">
+				</div>
+				<div class="correct-text col s12 m12 l6 xl6">
+					<p>CONDRAGULATIONS! You Guessed Right</p>
+				<ul>
+					<li><b class="bold">TIME</b> <span></span></li>
+					<li><b class="bold">SCORE</b> <span></span></li>
+					<li><b class="bold">TOTAL</b> <span></span><li>
+				</ul>
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  					<i class="material-icons">navigate_next</i>
+  				</a>
+				</div>
+			</div>
 		</div>
 
 <!--WRONG CARD-->
 		<div class="card wrong hidden">
-		</div>
+			<h1>WRONG</h1>
+			<div class="row">
+				<div class="col s12 m12 l6 xl6">
+					<img src="img/fail5.gif" class="responsive-img image-center">
+				</div>
+				<div class="wrong-text col s12 m12 l6 xl6">
+					<p>SASHAY AWAY! You lost a life!</p>
+				<ul>
+					<li id="lives-text"><b class="bold">LIVES</b></li>
+					<li>
+						<span><i class="material-icons small">favorite</i></span>
+						<span><i class="material-icons small">favorite</i></span>
+						<span><i class="material-icons small">favorite</i></span>
+					</li>
+					<li><b class="bold">TOTAL</b> <span></span><li>
+				</ul>
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  					<i class="material-icons">navigate_next</i>
+  				</a>
+				</div>
+			</div>
 
 <!--GAME OVER CARD-->
 		<div class="card game-over hidden">
+			<h1>GAME OVER</h1>
+			<div class="row">
+				<div class="col s12 m12 l6 xl6">
+					<img src="img/byeGirl.gif" class="responsive-img image-center">
+				</div>
+				<div class="game-over-text col s12 m12 l6 xl6">
+					<p>BYE GIRL BYE!</p>
+				<ul>
+					<li><b class="bold">CORRECT</b> <span></span><li>
+					<li><b class="bold">INCORRECT</b> <span></span><li>
+					<li><b class="bold">UNANSWERED</b> <span></span><li>
+					<li><b class="bold dark">TOTAL</b> <span></span><li>
+				</ul>
+  				<a class="btn-floating btn-large waves-effect waves-light pink lighten-3 arrow">
+  					<i class="material-icons">navigate_next</i>
+  				</a>
+				</div>
+			</div>
 		</div>
-		
+
 <!--Fixed Bottom Button Navigation -->
-		<div class="fixed-action-btn horizontal click-to-toggle bottom-nav">
+		<div class="fixed-action-btn horizontal click-to-toggle">
 			<a class="btn-floating btn-large pink lighten-3" title="Navigation Toggle">
 				<i class="material-icons">menu</i>
 			</a>
 			<ul>
-				<li class="signature">Made with <i class="material-icons tiny">favorite</i> by <a href="http://philipwisner.com" target="_blank">Philip Wisner</a></li>
 				<li><a class="btn-floating pink darken-2" id="categories" title="Select Category"><i class="material-icons">apps</i></a></li>
 				<li><a class="btn-floating pink lighten-1" id="instructions"><i class="material-icons" title="Instructions">info_outline</i></a></li>
 				<li><a class="btn-floating pink lighten-3" id="home" title="Home"><i class="material-icons">home</i></a></li>
 			</ul>
 		</div>
-
-<!--	have footer be and icon that when you hover bounces and when you click, displays made with love by Philip Wisner-->
-
-
   </div>
-
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
