@@ -7,6 +7,7 @@ $(document).ready(function () {
 		$('.queen-lingo-question').removeClass('hidden');
 		generateHTML();
 		timerWrapper();
+		randomOrder();
 	});
 
 
@@ -36,7 +37,7 @@ $(document).ready(function () {
 
 //Function to generate the Question Card
 function generateHTML() {
-		gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + (questionCounter + 1) + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + queenLingo[questionCounter].question + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'></span>s</p><div id='countdown-number'></div><svg><circle r='18' cx='20' cy='20'></circle></svg></div><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span> <i class='material-icons heart'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + queenLingo[questionCounter].answers[0] + "</p><p class='answer'>" + queenLingo[questionCounter].answers[1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + queenLingo[questionCounter].answers[2] + "</p><p class='answer'>" + queenLingo[questionCounter].answers[3] + "</p></div></div>";
+	gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + (questionCounter + 1) + askedQuestions + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + queenLingo[questionCounter].question + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'></span>s</p><div id='countdown-number'></div><svg><circle r='18' cx='20' cy='20'></circle></svg></div><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span> <i class='material-icons heart'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + queenLingo[questionCounter].answers[0] + "</p><p class='answer'>" + queenLingo[questionCounter].answers[1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + queenLingo[questionCounter].answers[2] + "</p><p class='answer'>" + queenLingo[questionCounter].answers[3] + "</p></div></div>";
 		$(".queen-lingo-question").html(gameHTML);
 }
 
@@ -90,6 +91,19 @@ function generateLossDueToTimeOut() {
 //Function to display gameover screen
 function finalScreen() {
 	gameHTML = "<h1>GAME OVER</h1><div class='row'><div class='col s12 m12 l6 xl6'><img src='img/byeGirl.gif' class='responsive-img image-center'></div><div class='game-over-text col s12 m12 l6 xl6'><p>BYE GIRL BYE!</p><ul><li><b class='bold'>Incorrect</b> <span>" + incorrectTally + "</span><li><li><b class='bold'>Unanswered</b> <span>" + unansweredTally + "</span><li><li><b class='bold dark'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='game-over-btn'><i class='material-icons'>navigate_next</i></a></div></div>";
+	$(".game-over").removeClass('hidden');
+	$(".queen-lingo-question").addClass('hidden');
+	$(".game-over").html(gameHTML);
+	resetGame();
+	$("#game-over-btn").on('click', function() {
+		$('.game-over').addClass('hidden');
+		$('.category').removeClass('hidden');
+	})
+}
+
+//Function to display Win screen
+function winScreen() {
+	gameHTML = "<h1>YOU WON!</h1><div class='row'><div class='col s12 m12 l6 xl6'><img src='img/youWon.gif' class='responsive-img image-center'></div><div class='game-over-text col s12 m12 l6 xl6'><p>You really know your drag trivia!</p><ul><li><b class='bold'>Incorrect</b> <span>" + incorrectTally + "</span><li><li><b class='bold'>Unanswered</b> <span>" + unansweredTally + "</span><li><li><b class='bold dark'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='game-over-btn'><i class='material-icons'>navigate_next</i></a></div></div>";
 	$(".game-over").removeClass('hidden');
 	$(".queen-lingo-question").addClass('hidden');
 	$(".game-over").html(gameHTML);
@@ -185,8 +199,9 @@ function resetGame() {
 	unansweredTally = 0;
 	lives = 5;
 	counter = 15;
-//	askedQuestions = [];
-//	inProcess = true;
+	askedQuestions = [];
+	inProcess = true;
+	randomOrder();
 }
 
 //Change the Lingo arrays to objects?
@@ -350,26 +365,33 @@ var incorrectTally = 0;
 var unansweredTally = 0;
 var lives = 5;
 var clickSound = new Audio("sound/TonguePop.mp3");
-//var askedQuestions = [];
-//var inProcess = true;
-//
+var askedQuestions = [];
+var inProcess = true;
+
+
 //Function to generate random Question Order
-//while(inProcess){
-//	var randomQuiz = Math.floor(Math.random() * questionQueenLingo.length);
-//	var isDone = false;
-//
-//	for (var i = 0; i < askedQuestions.length; i++) {
-//		if (askedQuestions[i] === randomQuiz)
-//			isDone = true;
-//	}
-//	if (!isDone) {
-////		console.log(questionQueenLingo[randomQuiz]);
-//		askedQuestions.push(randomQuiz);
-//	}
-//	if (questionQueenLingo.length == askedQuestions.length)
-//		inProcess = false;
-//	}
-//
+function randomOrder() {
+while(inProcess){
+	var randomQuiz = Math.floor(Math.random() * queenLingo.length);
+	var isDone = false;
+
+	for (var i = 0; i < askedQuestions.length; i++) {
+		if (askedQuestions[i] === randomQuiz)
+			isDone = true;
+	}
+	if (!isDone) {
+// 		console.log(queenLingo[randomQuiz].question);
+		askedQuestions.push(randomQuiz);
+	}
+	if (queenLingo.length == askedQuestions.length)
+		inProcess = false;
+	}
+}
+
+console.log(randomOrder());
+
+//if you run this function it will give me a list of all the questions in a random order each time.
+
 
 
 

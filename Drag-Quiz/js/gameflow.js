@@ -46,7 +46,6 @@ $(document).ready(function () {
 		$('.correct').addClass('hidden');
 		$('.wrong').addClass('hidden');
 		$('.game-over').addClass('hidden');
-		
 }
 	$('#home').on('click', function () {
 		$('.welcome').removeClass('hidden');
