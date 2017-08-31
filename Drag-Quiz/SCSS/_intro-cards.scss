@@ -1,0 +1,75 @@
+@import "responsive-font-size";
+@import "variables";
+
+//INTRO CARDS FORMATTING
+.enter-text {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 60px;
+	p {
+		padding: 20px;
+		max-width: 600px;
+		margin: 0 auto;
+		margin-bottom: 70px;
+		@include responsive-font-size (1em, 3.5em, 640px, 1200px, 0.5em);
+	}
+	.enter {
+		@include responsive-font-size (1em, 2em, 640px, 1200px, 0.5em);
+	}
+}
+
+.instruction-text {
+	margin: 0 auto;
+	text-align: left;
+	margin-top: 20px;
+	ul {
+		padding: 1S0px;
+	}
+	ul li {
+		padding-bottom: 20px;
+		max-width: 600px;
+		margin: 0 auto;
+		@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.3em);
+		color: $main-text-color;
+		font-weight: $main-text-weight;
+		}
+	.arrow {
+		margin-right: 20px;
+		position: absolute;
+		bottom: 50px;
+		right: 50px;
+	}
+}
+
+.category {
+	.cat-grid {
+		margin: 0 auto;
+		padding: 0 40px;
+	}
+	a {
+		& :hover {
+			background-color: $splash-color;
+	}
+	}
+	.cat-item {
+		text-align: center;
+		padding: 30px;
+		margin: 10px 40px;
+		background-color: $accent-color;
+		border-radius: 3px;
+		}
+		p {
+		@include responsive-font-size (1em, 1.9em, 640px, 1200px, 0.5em);
+		color: white;
+		font-weight: 400;
+		}
+}
+
+@media (min-width: 1200px) {
+  .cat-item {
+    height: 200px;
+		p {
+			padding-top: 50px;
+		}
+  }
+}

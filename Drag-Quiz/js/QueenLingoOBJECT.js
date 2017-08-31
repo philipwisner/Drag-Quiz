@@ -18,10 +18,12 @@ $(document).ready(function () {
 		if(selectedAnswer === queenLingo[askedQuestions[i]].correct) {
 			clearInterval(theClock);
 			generateWin();
+			winSound.play();
 		}
 		else {
 			clearInterval(theClock);
 			generateLoss();
+			failSound.play();
 		}
 	});
 
@@ -31,16 +33,33 @@ $(document).ready(function () {
 		clickSound.play();
 		resetGame();
 	});
-
 });
 
 
-//Function to generate the Question Card
-function generateHTML() {
-	gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + (questionCounter + 1) + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + queenLingo[askedQuestions[i]].question + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'></span>s</p><div id='countdown-number'></div><svg><circle r='18' cx='20' cy='20'></circle></svg></div><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span> <i class='material-icons heart'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + queenLingo[askedQuestions[i]].answers[0] + "</p><p class='answer'>" + queenLingo[askedQuestions[i]].answers[1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + queenLingo[askedQuestions[i]].answers[2] + "</p><p class='answer'>" + queenLingo[askedQuestions[i]].answers[3] + "</p></div></div>";
-		$(".queen-lingo-question").html(gameHTML);
+//Function to generate random Question Order
+function randomOrder() {
+while(inProcess){
+	var randomQuiz = Math.floor(Math.random() * queenLingo.length);
+	var isDone = false;
+
+	for (var i = 0; i < askedQuestions.length; i++) {
+		if (askedQuestions[i] === randomQuiz)
+			isDone = true;
+	}
+	if (!isDone) {
+// 		console.log(queenLingo[randomQuiz].question);
+		askedQuestions.push(randomQuiz);
+	}
+	if (queenLingo.length == askedQuestions.length)
+		inProcess = false;
+	}
 }
 
+//Function to generate the Question Card
+function generateHTML() {
+	gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + (questionCounter + 1) + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + queenLingo[askedQuestions[i]].question + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'></span>s</p><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span> <i class='material-icons heart'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + queenLingo[askedQuestions[i]].answers[0] + "</p><p class='answer'>" + queenLingo[askedQuestions[i]].answers[1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + queenLingo[askedQuestions[i]].answers[2] + "</p><p class='answer'>" + queenLingo[askedQuestions[i]].answers[3] + "</p></div></div>";
+		$(".queen-lingo-question").html(gameHTML);
+}
 
 //Function to Generate the Correct Card
 function generateWin() {
@@ -88,7 +107,7 @@ function generateLossDueToTimeOut() {
 	})
 }
 
-//Function to display gameover screen
+//Function to display Gameover screen
 function finalScreen() {
 	gameHTML = "<h1>GAME OVER</h1><div class='row'><div class='col s12 m12 l6 xl6'><img src='img/byeGirl.gif' class='responsive-img image-center'></div><div class='game-over-text col s12 m12 l6 xl6'><p>BYE GIRL BYE!</p><ul><li><b class='bold'>Incorrect</b> <span>" + incorrectTally + "</span><li><li><b class='bold'>Unanswered</b> <span>" + unansweredTally + "</span><li><li><b class='bold dark'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='game-over-btn'><i class='material-icons'>navigate_next</i></a></div></div>";
 	$(".game-over").removeClass('hidden');
@@ -150,7 +169,6 @@ function wait() {
 	}
 }
 
-
 //Function to create the 15s timer
 function timerWrapper() {
 	theClock = setInterval(selectSeconds, 1000);
@@ -167,32 +185,8 @@ function timerWrapper() {
 	}
 }
 
-//
-//function timerAnimation() {
-//	timerHTML = "<div id='countdown'><div id='countdown-number'></div><svg><circle r='18' cx='20' cy='20'></circle></svg></div>";
-//	var countdownNumber = $('#countdown-number');
-//	var counter = 15;
-//
-//	countdownNumber.textContent = counter;
-//
-//	setInterval(function() {
-//		counter = --counter <= 0 ? 15 : counter;
-//
-//		countdownNumber.textContent = counter;
-//	}, 1000);
-//
-//}
 
-
-//CREATE function to display you won screen
-
-//CREATE function to modify the timer
-
-//CREATE function to use random number to select question index
-	//also make sure question isn't repeated
-
-//OTHER OPTION: Shuffle the question array on start and then output in that order
-
+//Function to reset all the game variables
 function resetGame() {
 	questionCounter = 0;
 	correctTally = 0;
@@ -209,6 +203,21 @@ function resetGame() {
 var startScreen;
 var gameHTML;
 var counter = 15;
+var questionCounter = 0;
+var selecterAnswer;
+var theClock;
+var correctTally = 0;
+var incorrectTally = 0;
+var unansweredTally = 0;
+var lives = 5;
+var clickSound = new Audio("sound/TonguePop.mp3");
+var winSound = new Audio("sound/yas.mp3");
+var failSound = new Audio("sound/baloney.mp3");
+var askedQuestions = [];
+var inProcess = true;
+var i = 0;
+
+//Queen Lingo Questions Object
 var queenLingo = [
 	{
 	"question": "What does fishy mean?",
@@ -356,44 +365,3 @@ var queenLingo = [
 	"wrongImage": "<img class='img-responsive img-center' src='img/fail8.gif'>"
 	}
 ];
-
-var questionCounter = 0;
-var selecterAnswer;
-var theClock;
-var correctTally = 0;
-var incorrectTally = 0;
-var unansweredTally = 0;
-var lives = 5;
-var clickSound = new Audio("sound/TonguePop.mp3");
-var askedQuestions = [];
-var inProcess = true;
-var i = 0;
-
-
-//Function to generate random Question Order
-function randomOrder() {
-while(inProcess){
-	var randomQuiz = Math.floor(Math.random() * queenLingo.length);
-	var isDone = false;
-
-	for (var i = 0; i < askedQuestions.length; i++) {
-		if (askedQuestions[i] === randomQuiz)
-			isDone = true;
-	}
-	if (!isDone) {
-// 		console.log(queenLingo[randomQuiz].question);
-		askedQuestions.push(randomQuiz);
-	}
-	if (queenLingo.length == askedQuestions.length)
-		inProcess = false;
-	}
-}
-
-console.log(randomOrder());
-
-//if you run this function it will give me a list of all the questions in a random order each time.
-
-
-
-
-

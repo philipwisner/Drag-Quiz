@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	//Controls the DOM to only allow current card to be shown
 	$('.enter').on('click', function () {
 		$('.welcome').addClass('hidden');
 		$('.instructions').removeClass('hidden');
@@ -31,6 +32,8 @@ $(document).ready(function () {
 		$('.category').addClass('hidden');
 		$('.mix-all').removeClass('hidden');
 	});
+
+	//Function to hide all other cards
 	function hideCards () {
 		$('.queen-lingo').addClass('hidden');
 		$('.queen-lingo-question').addClass('hidden');
@@ -47,6 +50,8 @@ $(document).ready(function () {
 		$('.wrong').addClass('hidden');
 		$('.game-over').addClass('hidden');
 }
+
+	//Hides all other cards when using bottom navigation
 	$('#home').on('click', function () {
 		$('.welcome').removeClass('hidden');
 		$('.instructions').addClass('hidden');
@@ -65,11 +70,7 @@ $(document).ready(function () {
 		$('.instructions').addClass('hidden');
 		hideCards();
 	});
-	$('#queen-lingo-quiz').on('click', function () {
-		
-	});
 });
 
 
 
-//way to hide current

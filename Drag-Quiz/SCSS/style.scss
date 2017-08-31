@@ -1,11 +1,13 @@
 @import "responsive-font-size";
-
-$splash-color: #f06292;
-$accent-color: #f48fb1;
-$heading-color: #616161;
-$main-text-color: #757575;
-$main-text-weight: 300;
-$bolder-text-weight: 700;
+@import "variables";
+@import "intro-cards";
+@import "result-cards";
+@import "queen-lingo";
+@import "name-queen";
+@import "who-said";
+@import "herstory";
+@import "drag-transform";
+@import "mix-all";
 
 * {
 	box-sizing: border-box;
@@ -13,66 +15,39 @@ $bolder-text-weight: 700;
 	padding: 0;
 }
 
-img {
-	max-height: 500px;
-}
-
+//HTML ELEMENT STYLING
 body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	padding: 10px 0 30px 0;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	@include responsive-font-size (1.5em, 5.5em, 640px, 1200px, 0.3em);
+	font-weight: $bolder-text-weight;
+	color: $heading-color;
+}
+
+p {
+	color: $main-text-color;
+	font-weight: 300;
+}
+
+img {
+	max-height: 500px;
+}
+
+
+//COMMON CLASS STYLINGS
 .hidden {
 	display: none;
 }
-
-
-#countdown {
-  position: relative;
-  margin: auto;
-  margin-top: 100px;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-}
-
-#countdown-number {
-  color: black;
-  display: inline-block;
-  line-height: 40px;
-}
-
-svg {
-  position: absolute;
-  top: 200px;
-  right: 130px;
-  width: 40px;
-  height: 40px;
-  transform: rotateY(-180deg) rotateZ(-90deg);
-}
-
-svg circle {
-  stroke-dasharray: 113px;
-  stroke-dashoffset: 0px;
-  stroke-linecap: round;
-  stroke-width: 2px;
-  stroke: $splash-color;
-  fill: none;
-  animation: countdown 15s linear infinite forwards;
-}
-
-@keyframes countdown {
-  from {
-    stroke-dashoffset: 0px;
-  }
-  to {
-    stroke-dashoffset: 113px;
-  }
-}
-
-
-
 
 .bottom-nav {
 	.signature {
@@ -84,27 +59,9 @@ svg circle {
 			top: 1.5px;
 		}
 	a {
-		color: #616161;
+		color: $heading-color;
 	}
 	}
-}
-
-
-h1 {
-	text-align: center;
-	margin: 0 auto;
-	width: 100%;
-	padding: 10px 0 30px 0;
-	text-transform: uppercase;
-	font-family: 'Roboto', sans-serif;
-	@include responsive-font-size (1.5em, 5.5em, 640px, 1200px, 0.3em);
-	font-weight: 700;
-	color: $heading-color;
-}
-
-p {
-	color: $main-text-color;
-	font-weight: 300;
 }
 
 .background {
@@ -119,13 +76,13 @@ p {
 	margin-top: 45vh;
 	padding: 30px 0;
 	.queen-lingo-question {
-	margin-top: 0;
+		margin-top: 0;
 	}
 	.correct {
-	margin-top: 0;
+		margin-top: 0;
 	}
 	.wrong {
-	margin-top: 0;
+		margin-top: 0;
 	}
 }
 
@@ -137,601 +94,5 @@ p {
 }
 
 .bold {
-	font-weight: 500px;
-}
-
-.enter-text {
-	margin: 0 auto;
-	text-align: center;
-	margin-top: 60px;
-	p {
-		padding: 20px;
-		max-width: 600px;
-		margin: 0 auto;
-		margin-bottom: 70px;
-		@include responsive-font-size (1em, 3.5em, 640px, 1200px, 0.5em);
-	}
-	.enter {
-		@include responsive-font-size (1em, 2em, 640px, 1200px, 0.5em);
-	}
-}
-
-.instruction-text {
-	margin: 0 auto;
-	text-align: left;
-	margin-top: 20px;
-	ul {
-		padding: 1S0px;
-	}
-	ul li {
-		padding-bottom: 20px;
-		max-width: 600px;
-		margin: 0 auto;
-		@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.3em);
-		color: $main-text-color;
-		font-weight: $main-text-weight;
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
-	}
-}
-
-.category {
-	.cat-grid {
-		margin: 0 auto;
-		padding: 0 40px;
-	}
-	a {
-		& :hover {
-			background-color: $splash-color;
-	}
-	}
-	.cat-item {
-		text-align: center;
-		padding: 30px;
-		margin: 10px 40px;
-		background-color: $accent-color;
-		border-radius: 3px;
-		}
-		p {
-		@include responsive-font-size (1em, 1.9em, 640px, 1200px, 0.5em);
-		color: white;
-		font-weight: 400;
-		}
-}
-
-@media (min-width: 1200px) {
-  .cat-item {
-    height: 200px;
-		p {
-			padding-top: 50px;
-		}
-  }
-}
-
-.queen-lingo-text {
-	margin: 0 auto;
-	text-align: left;
-	margin-top: 20px;
-	ul {
-		padding: 1S0px;
-	}
-	ul li {
-		padding-bottom: 40px;
-		max-width: 600px;
-		margin: 0 auto;
-		color: $main-text-color;
-		font-weight: $main-text-weight;
-		@include responsive-font-size (1em, 2.3em, 640px, 1200px, 0.3em);
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
-	}
-}
-
-.queen-lingo-question {
-	position: relative;
-	h1 {
-		text-align: left;
-		margin: 0;
-		padding: 0;
-		margin-left: 20px;
-	}
-	h3 {
-		text-align: left;
-		margin: 5px 0 0 30px;
-		color: $main-text-color;
-		@include responsive-font-size (1em, 2.3em, 640px, 1200px, 0.3em);
-		padding: 0;
-	}
-	.score-float {
-		position: absolute;
-		top: 60px;
-		right: 40px;
-		@include responsive-font-size (1em, 1.6em, 640px, 1200px, 0.3em);
-	}
-	.question {
-		@include responsive-font-size (1em, 2em, 640px, 1200px, 0.3em);
-		text-align: center;
-		margin: 20px 0;
-		font-weight: $bolder-text-weight;
-	}
-	.timer {
-		float: right;
-		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
-		right: 10%;	
-		position: absolute;
-		text-align: center;
-	} .lives-count {
-		float: left;
-		position: absolute;
-		color: $main-text-color;
-		left: 10%;
-		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
-		text-align: center;
-		i {
-			color: $accent-color;
-			position: relative;
-			top: 4px;
-		}
-	} .answers {
-		margin-top: 80px;
-		padding: 20px 20px 0 20px;
-		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
-		text-align: center;
-		p {
-			padding: 20px 20px 40px 20px;
-			&:hover {
-				color: $accent-color;
-				cursor: pointer;
-				cursor: hand;
-				font-weight: 700;
-			}
-		}
-	}
-	} 
-
-.name-queen-text {
-	margin: 0 auto;
-	text-align: left;
-	margin-top: 20px;
-	ul {
-		padding: 1S0px;
-	}
-	ul li {
-		padding-bottom: 40px;
-		max-width: 600px;
-		margin: 0 auto;
-		color: $main-text-color;
-		font-weight: $main-text-weight;
-		@include responsive-font-size (1em, 2em, 640px, 1200px, 0.3em);
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
-	}
-}
-
-.name-queen-question {
-	position: relative;
-	h1 {
-		text-align: left;
-		margin: 0;
-		padding: 0;
-		margin-left: 20px;
-	}
-	h3 {
-		text-align: left;
-		margin: 5px 0 0 30px;
-		color: $main-text-color;
-		@include responsive-font-size (1em, 2.3em, 640px, 1200px, 0.3em);
-		padding: 0;
-	} .score-float {
-		position: absolute;
-		top: 60px;
-		right: 40px;
-		@include responsive-font-size (1em, 1.6em, 640px, 1200px, 0.3em);
-	} .question {
-		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
-		text-align: center;
-		margin: 10px 0;
-	} .timer {
-		float: right;
-		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
-		right: 10%;
-		position: absolute;
-		text-align: center;
-	} .lives-count {
-		float: left;
-		position: absolute;
-		color: $main-text-color;
-		left: 10%;
-		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
-		text-align: center;
-		i {
-			color: $accent-color;
-		}
-	} .answers {
-		margin-top: 80px;
-		padding: 20px 20px 0 20px;
-		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
-		text-align: center;
-		p {
-			padding: 20px;
-		}
-	}
-	}
-
-.who-said-text {
-	margin: 0 auto;
-	text-align: left;
-	margin-top: 20px;
-	ul {
-		padding: 1S0px;
-	}
-	ul li {
-		padding-bottom: 30px;
-		max-width: 600px;
-		margin: 0 auto;
-		color: $main-text-color;
-		font-weight: $main-text-weight;
-		@include responsive-font-size (1em, 2em, 640px, 1200px, 0.3em);
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
-	}
-}
-
-.who-said-question {
-	position: relative;
-	h1 {
-		text-align: left;
-		margin: 0;
-		padding: 0;
-		margin-left: 20px;
-	}
-	h3 {
-		text-align: left;
-		margin: 5px 0 0 30px;
-		color: $main-text-color;
-		@include responsive-font-size (1em, 2.3em, 640px, 1200px, 0.3em);
-		padding: 0;
-	} .score-float {
-		position: absolute;
-		top: 60px;
-		right: 40px;
-		@include responsive-font-size (1em, 1.6em, 640px, 1200px, 0.3em);
-	} .question {
-		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
-		text-align: center;
-		margin: 20px 0;
-	} .timer {
-		float: right;
-		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
-		right: 10%;	
-		position: absolute;
-		text-align: center;
-	} .lives-count {
-		float: left;
-		position: absolute;
-		color: $main-text-color;
-		left: 10%;
-		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
-		text-align: center;
-		i {
-			color: $accent-color;
-		}
-	} .answers {
-		margin-top: 80px;
-		padding: 20px 20px 0 20px;
-		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
-		text-align: center;
-		p {
-			padding: 20px;
-		}
-	}
-	} 
-
-.herstory-text {
-	margin: 0 auto;
-	text-align: left;
-	margin-top: 20px;
-	ul {
-		padding: 1S0px;
-	}
-	ul li {
-		padding-bottom: 30px;
-		max-width: 600px;
-		margin: 0 auto;
-		color: $main-text-color;
-		font-weight: $main-text-weight;
-		@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.3em);
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
-	}
-}
-
-.herstory-question {
-	position: relative;
-	h1 {
-		text-align: left;
-		margin: 0;
-		padding: 0;
-		margin-left: 20px;
-	}
-	h3 {
-		text-align: left;
-		margin: 5px 0 0 30px;
-		color: $main-text-color;
-		@include responsive-font-size (1em, 2.3em, 640px, 1200px, 0.3em);
-		padding: 0;
-	} .score-float {
-		position: absolute;
-		top: 60px;
-		right: 40px;
-		@include responsive-font-size (1em, 1.6em, 640px, 1200px, 0.3em);
-	} .question {
-		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
-		text-align: center;
-		margin: 20px 0;
-	} .timer {
-		float: right;
-		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
-		right: 10%;	
-		position: absolute;
-		text-align: center;
-	} .lives-count {
-		float: left;
-		position: absolute;
-		color: $main-text-color;
-		left: 10%;
-		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
-		text-align: center;
-		i {
-			color: $accent-color;
-		}
-	} .answers {
-		margin-top: 80px;
-		padding: 20px 20px 0 20px;
-		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
-		text-align: center;
-		p {
-			padding: 20px;
-		}
-	}
-	} 
-
-.drag-transform {
-	img {
-		width: 80%;
-	}
-	.drag-transform-text {
-		margin: 0 auto;
-		text-align: left;
-		margin-top: 40px;
-		ul {
-			padding: 1S0px;
-		}
-		ul li {
-			padding-bottom: 30px;
-			max-width: 600px;
-			margin: 0 auto;
-			color: $main-text-color;
-			font-weight: $main-text-weight;
-			@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.3em);
-			}
-		.arrow {
-			margin-right: 20px;
-			position: absolute;
-			bottom: 50px;
-			right: 50px;
-		}
-	}
-}
-
-.drag-transform-question {
-	position: relative;
-	h1 {
-		text-align: left;
-		margin: 0;
-		padding: 0;
-		margin-left: 20px;
-	}
-	h3 {
-		text-align: left;
-		margin: 5px 0 0 30px;
-		color: $main-text-color;
-		@include responsive-font-size (1em, 2.3em, 640px, 1200px, 0.3em);
-		padding: 0;
-	} .score-float {
-		position: absolute;
-		top: 60px;
-		right: 40px;
-		@include responsive-font-size (1em, 1.6em, 640px, 1200px, 0.3em);
-	} .question {
-		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
-		text-align: center;
-		margin: 10px 0;
-	} .timer {
-		float: right;
-		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
-		right: 10%;
-		position: absolute;
-		text-align: center;
-	} .lives-count {
-		float: left;
-		position: absolute;
-		color: $main-text-color;
-		left: 10%;
-		@include responsive-font-size (1em, 1.65em, 640px, 1200px, 0.3em);
-		text-align: center;
-		i {
-			color: $accent-color;
-		}
-	} .answers {
-		margin-top: 80px;
-		padding: 20px 20px 0 20px;
-		@include responsive-font-size (1em, 1.85em, 640px, 1200px, 0.3em);
-		text-align: center;
-		p {
-			padding: 20px;
-		}
-		.smaller {
-			max-width: 200px;
-		}
-	}
-	}
-
-.mix-all-text {
-	margin: 0 auto;
-	text-align: left;
-	margin-top: 40px;
-	ul {
-		padding: 1S0px;
-	}
-	ul li {
-		padding-bottom: 30px;
-		max-width: 600px;
-		margin: 0 auto;
-		color: $main-text-color;
-		font-weight: $main-text-weight;
-		@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.3em);
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
-	}
-}
-
-.correct-text {
-	margin: 0 auto;
-	text-align: left;
-	margin-top: 20px;
-	p {
-		@include responsive-font-size (1.2em, 2.5em, 640px, 1200px, 0.3em);
-		text-align: center;
-		margin-bottom: 60px;
-	}
-	ul {
-		padding: 1S0px;
-	}
-	ul li {
-		padding-bottom: 20px;
-		max-width: 600px;
-		text-align: center;
-		margin: 0 auto;
-		color: $main-text-color;
-		font-weight: $main-text-weight;
-		@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.3em);
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
-	}
-}
-
-.wrong-text {
-	margin: 0 auto;
-	text-align: left;
-	margin-top: 20px;
-	p {
-		@include responsive-font-size (1.2em, 2.5em, 640px, 1200px, 0.3em);
-		text-align: center;
-		margin-bottom: 50px;
-	}
-	ul {
-		padding: 1S0px;
-		#lives-text {
-			margin-bottom: 0;
-			padding-bottom: 0;
-		}
-	}
-	ul li {
-		padding-bottom: 20px;
-		max-width: 600px;
-		text-align: center;
-		margin: 0 auto;
-		color: $main-text-color;
-		font-weight: $main-text-weight;
-		@include responsive-font-size (1.2em, 2.4em, 640px, 1200px, 0.3em);
-		span i {
-			color: $accent-color;
-			font-size: .9em;
-			position: relative;
-			top: 2px;
-		}
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
-	}
-	.correct-text {
-		@include responsive-font-size (1.2em, 2.2em, 640px, 1200px, 0.3em);
-		margin-bottom: 0;
-		padding-bottom: 0;
-		font-weight: 700;
-		color: $splash-color;
-	}
-	.correct-answer {
-		@include responsive-font-size (1.2em, 2em, 640px, 1200px, 0.3em);
-	}
-}
-
-.game-over-text {
-	margin: 0 auto;
-	text-align: left;
-	p {
-		@include responsive-font-size (1.2em, 3.5em, 640px, 1200px, 0.3em);
-		text-align: center;
-		margin-bottom: 30px;
-	}
-	ul {
-		padding: 1S0px;
-		#lives-text {
-			margin-bottom: 0;
-			padding-bottom: 0;
-		}
-	}
-	ul li {
-		padding-bottom: 10px;
-		max-width: 600px;
-		text-align: left;
-		margin: 0 auto;
-		color: $main-text-color;
-		font-weight: $main-text-weight;
-		@include responsive-font-size (1.2em, 2em, 640px, 1200px, 0.3em);
-		.dark {
-			color: $accent-color;
-		}
-		span {
-			color: $main-text-color;
-		}
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
-	}
+	font-weight: bold-text-weight;
 }
