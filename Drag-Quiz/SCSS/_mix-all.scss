@@ -1,0 +1,25 @@
+@import "responsive-font-size";
+@import "variables";
+
+.mix-all-text {
+	margin: 0 auto;
+	text-align: left;
+	margin-top: 40px;
+	ul {
+		padding: 1S0px;
+	}
+	ul li {
+		padding-bottom: 30px;
+		max-width: 600px;
+		margin: 0 auto;
+		color: $main-text-color;
+		font-weight: $main-text-weight;
+		@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.3em);
+		}
+	.arrow {
+		margin-right: 20px;
+		position: absolute;
+		bottom: 50px;
+		right: 50px;
+	}
+}

@@ -5,9 +5,9 @@ $(document).ready(function () {
 		clickSound.play();
 		$('.queen-lingo').addClass('hidden');
 		$('.queen-lingo-question').removeClass('hidden');
+		randomOrder();
 		generateHTML();
 		timerWrapper();
-		randomOrder();
 	});
 
 
@@ -34,26 +34,6 @@ $(document).ready(function () {
 		resetGame();
 	});
 });
-
-
-//Function to generate random Question Order
-function randomOrder() {
-while(inProcess){
-	var randomQuiz = Math.floor(Math.random() * queenLingo.length);
-	var isDone = false;
-
-	for (var i = 0; i < askedQuestions.length; i++) {
-		if (askedQuestions[i] === randomQuiz)
-			isDone = true;
-	}
-	if (!isDone) {
-// 		console.log(queenLingo[randomQuiz].question);
-		askedQuestions.push(randomQuiz);
-	}
-	if (queenLingo.length == askedQuestions.length)
-		inProcess = false;
-	}
-}
 
 //Function to generate the Question Card
 function generateHTML() {
@@ -199,23 +179,12 @@ function resetGame() {
 	randomOrder();
 }
 
+
+
 //VARIABLES
 var startScreen;
 var gameHTML;
 var counter = 15;
-var questionCounter = 0;
-var selecterAnswer;
-var theClock;
-var correctTally = 0;
-var incorrectTally = 0;
-var unansweredTally = 0;
-var lives = 5;
-var clickSound = new Audio("sound/TonguePop.mp3");
-var winSound = new Audio("sound/yas.mp3");
-var failSound = new Audio("sound/baloney.mp3");
-var askedQuestions = [];
-var inProcess = true;
-var i = 0;
 
 //Queen Lingo Questions Object
 var queenLingo = [
@@ -365,3 +334,36 @@ var queenLingo = [
 	"wrongImage": "<img class='img-responsive img-center' src='img/fail8.gif'>"
 	}
 ];
+
+var questionCounter = 0;
+var selecterAnswer;
+var theClock;
+var correctTally = 0;
+var incorrectTally = 0;
+var unansweredTally = 0;
+var lives = 5;
+var clickSound = new Audio("sound/TonguePop.mp3");
+var winSound = new Audio("sound/yas.mp3");
+var failSound = new Audio("sound/baloney.mp3");
+var askedQuestions = [];
+var inProcess = true;
+var i = 0;
+
+//Function to generate random Question Order
+function randomOrder() {
+while(inProcess){
+	var randomQuiz = Math.floor(Math.random() * queenLingo.length);
+	var isDone = false;
+
+	for (var i = 0; i < askedQuestions.length; i++) {
+		if (askedQuestions[i] === randomQuiz)
+			isDone = true;
+	}
+	if (!isDone) {
+// 		console.log(queenLingo[randomQuiz].question);
+		askedQuestions.push(randomQuiz);
+	}
+	if (queenLingo.length == askedQuestions.length)
+		inProcess = false;
+	}
+}
