@@ -7,9 +7,9 @@ $("#queen-lingo-quiz").on("click", function() {
 	$('.queen-lingo-question').removeClass('hidden');
 	timerWrapper();
 	generateHTML();
-}); 
+});
 
-	
+
 // This checks if the answer is correct after user clicks
 $("body").on("click", ".answer", function(event){
 	clickSound.play();
@@ -22,13 +22,13 @@ $("body").on("click", ".answer", function(event){
 		clearInterval(theClock);
 		generateLoss();
 	}
-}); 
-	
+});
+
 //Click on restart button to go back to category card
 $("body").on("click", ".reset-button", function(event) {
 	clickSound.play();
 	resetGame();
-}); 
+});
 
 });
 
@@ -44,7 +44,7 @@ function generateLossDueToTimeOut() {
 	$("#wrong-next").on('click', function(){
 		$(".wrong").addClass('hidden');
 		$(".queen-lingo-question").removeClass('hidden');
-		setTimeout(wait, 0); 
+		setTimeout(wait, 0);
 	})
 }
 
@@ -58,7 +58,7 @@ function generateWin() {
 	$("#correct-next").on('click', function(){
 		$(".correct").addClass('hidden');
 		$(".queen-lingo-question").removeClass('hidden');
-		setTimeout(wait, 0); 
+		setTimeout(wait, 0);
 	})
 }
 
@@ -75,16 +75,16 @@ function generateLoss() {
 	$("#wrong-next").on('click', function(){
 		$(".wrong").addClass('hidden');
 		$(".queen-lingo-question").removeClass('hidden');
-		setTimeout(wait, 0); 
+		setTimeout(wait, 0);
 	})
 }
 
-
 //Function to generate the Question Card
 function generateHTML() {
-		gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + questionCounter + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + questionQueenLingo[questionCounter] + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'></span>s</p><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span> <i class='material-icons heart'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + answersQueenLingo[questionCounter][0] + "</p><p class='answer'>" + answersQueenLingo[questionCounter][1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + answersQueenLingo[questionCounter][2] + "</p><p class='answer'>" + answersQueenLingo[questionCounter][3] + "</p></div></div>";
+		gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + randomQuiz + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + questionQueenLingo[randomQuiz] + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'></span>s</p><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span> <i class='material-icons heart'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + answersQueenLingo[randomQuiz][0] + "</p><p class='answer'>" + answersQueenLingo[randomQuiz][1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + answersQueenLingo[randomQuiz][2] + "</p><p class='answer'>" + answersQueenLingo[randomQuiz][3] + "</p></div></div>";
 		$(".queen-lingo-question").html(gameHTML);
 }
+
 
 //Function to check if there are still questions left to ask
 function wait() {
@@ -103,39 +103,8 @@ function wait() {
 		finalScreen();
 	}
 }
+// WRITE A SWITCH FOR POINT VALUES
 
-
-//correct talley is the point total based off of the timer value at selection. Use a switch statement to modify the timwe
-
-
-function displayHearts(lives) {
-var heartIcons = "";
-	switch(lives) {
-		case 5:
-			heartIcons = "<i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i>";
-			return heartIcons;
-			break;
-		case 4:
-			heartIcons = "<i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i>";
-			return heartIcons;
-			break;
-		case 3:
-			heartIcons = "<i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i>";
-			return heartIcons;
-			break;
-		case 2:
-			heartIcons = "<i class='material-icons small'>favorite</i><i class='material-icons small'>favorite</i>";
-			return heartIcons;
-			break;
-		case 1:
-			heartIcons = "<i class='material-icons small'>favorite</i>";
-			return heartIcons;
-			break;
-		default:
-			return heartIcons;
-			break;
-	}
-}
 
 
 //Function to create the 15s timer
@@ -152,7 +121,6 @@ function timerWrapper() {
 		$("#timer").html(counter);
 	}
 }
-
 
 
 //Function to display gameover screen
@@ -184,6 +152,8 @@ function resetGame() {
 	unansweredTally = 0;
 	lives = 5;
 	counter = 15;
+	askedQuestions = [];
+	inProcess = true;
 }
 
 //Change the Lingo arrays to objects?
@@ -341,3 +311,22 @@ var incorrectTally = 0;
 var unansweredTally = 0;
 var lives = 5;
 var clickSound = new Audio("sound/TonguePop.mp3");
+var askedQuestions = [];
+var inProcess = true;
+
+//Function to generate random Question Order
+while(inProcess){
+	var randomQuiz = Math.floor(Math.random() * questionQueenLingo.length);
+	var isDone = false;
+
+	for (var i = 0; i < askedQuestions.length; i++) {
+		if (askedQuestions[i] === randomQuiz)
+			isDone = true;
+	}
+	if (!isDone) {
+//		console.log(questionQueenLingo[randomQuiz]);
+		askedQuestions.push(randomQuiz);
+	}
+	if (questionQueenLingo.length == askedQuestions.length)
+		inProcess = false;
+	}

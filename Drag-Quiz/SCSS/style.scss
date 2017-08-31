@@ -23,6 +23,53 @@ body {
 	display: none;
 }
 
+
+#countdown {
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: black;
+  display: inline-block;
+  line-height: 40px;
+}
+
+svg {
+  position: absolute;
+  top: 200px;
+  right: 130px;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: $splash-color;
+  fill: none;
+  animation: countdown 15s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
+
+
+
+
 .bottom-nav {
 	.signature {
 		transition-delay: 175ms;
@@ -226,6 +273,8 @@ p {
 		text-align: center;
 		i {
 			color: $accent-color;
+			position: relative;
+			top: 4px;
 		}
 	} .answers {
 		margin-top: 80px;
@@ -622,6 +671,9 @@ p {
 		@include responsive-font-size (1.2em, 2.4em, 640px, 1200px, 0.3em);
 		span i {
 			color: $accent-color;
+			font-size: .9em;
+			position: relative;
+			top: 2px;
 		}
 		}
 	.arrow {
