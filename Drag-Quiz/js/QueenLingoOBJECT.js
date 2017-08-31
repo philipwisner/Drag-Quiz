@@ -15,7 +15,7 @@ $(document).ready(function () {
 	$("body").on("click", ".answer", function(event){
 		clickSound.play();
 		selectedAnswer = $(this).text();
-		if(selectedAnswer === queenLingo[questionCounter].correct) {
+		if(selectedAnswer === queenLingo[askedQuestions[i]].correct) {
 			clearInterval(theClock);
 			generateWin();
 		}
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
 //Function to generate the Question Card
 function generateHTML() {
-	gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + (questionCounter + 1) + askedQuestions + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + queenLingo[questionCounter].question + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'></span>s</p><div id='countdown-number'></div><svg><circle r='18' cx='20' cy='20'></circle></svg></div><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span> <i class='material-icons heart'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + queenLingo[questionCounter].answers[0] + "</p><p class='answer'>" + queenLingo[questionCounter].answers[1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + queenLingo[questionCounter].answers[2] + "</p><p class='answer'>" + queenLingo[questionCounter].answers[3] + "</p></div></div>";
+	gameHTML = "<h1>QUEEN LINGO</h1><h3>Question <span id='question-counter'>" + (questionCounter + 1) + "</span></h3><p class='score-float'><b class='bold'>SCORE</b> <span>" + correctTally + "</span>pts</p><p class='question'><span>" + queenLingo[askedQuestions[i]].question + "</span></p><p class='timer'><b class='bold'>TIMER</b> <span id='timer'></span>s</p><div id='countdown-number'></div><svg><circle r='18' cx='20' cy='20'></circle></svg></div><ul class='lives-count'><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span> <i class='material-icons heart'>favorite</i></span></li></ul><div class='row answers'><div class='col s12 m12 l6 xl6'><p class='first-answer answer'>" + queenLingo[askedQuestions[i]].answers[0] + "</p><p class='answer'>" + queenLingo[askedQuestions[i]].answers[1] + "</p></div><div class='col s12 m12 l6 xl6'><p class='answer'>" + queenLingo[askedQuestions[i]].answers[2] + "</p><p class='answer'>" + queenLingo[askedQuestions[i]].answers[3] + "</p></div></div>";
 		$(".queen-lingo-question").html(gameHTML);
 }
 
@@ -45,7 +45,7 @@ function generateHTML() {
 //Function to Generate the Correct Card
 function generateWin() {
 	correctTally += counter;
-	gameHTML = "<h1>CORRECT</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + queenLingo[questionCounter].correctImage + "</div><div class='correct-text col s12 m12 l6 xl6'><p>CONDRAGULATIONS! You Guessed Right</p><ul><li><b class='bold'>TIME</b> <span>" + counter + "s</span></li><li><b class='bold'>SCORE</b> <span>" + counter + "pts</span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='correct-next'><i class='material-icons'>navigate_next</i></a></div></div>";
+	gameHTML = "<h1>CORRECT</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + queenLingo[askedQuestions[i]].correctImage + "</div><div class='correct-text col s12 m12 l6 xl6'><p>CONDRAGULATIONS! You Guessed Right</p><ul><li><b class='bold'>TIME</b> <span>" + counter + "s</span></li><li><b class='bold'>SCORE</b> <span>" + counter + "pts</span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='correct-next'><i class='material-icons'>navigate_next</i></a></div></div>";
 	$(".correct").removeClass('hidden');
 	$(".queen-lingo-question").addClass('hidden');
 	$(".correct").html(gameHTML);
@@ -60,8 +60,8 @@ function generateWin() {
 function generateLoss() {
 	lives -= 1;
 	incorrectTally++;
-	gameHTML = "<h1>WRONG</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + queenLingo[questionCounter].wrongImage +
-	"</div><div class='wrong-text col s12 m12 l6 xl6'><p>SASHAY AWAY! You lost a life!</p><ul><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span> <i class='material-icons heart'>favorite</i></span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='wrong-next'><i class='material-icons'>navigate_next</i></a></div></div>";
+	gameHTML = "<h1>WRONG</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + queenLingo[askedQuestions[i]].wrongImage +
+	"</div><div class='wrong-text col s12 m12 l6 xl6'><p>SASHAY AWAY! You lost a life!</p><p class='correct-text'>CORRECT ANSWER: </p><p class='correct-answer'>" + queenLingo[askedQuestions[i]].correct + "</p><ul><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span> <i class='material-icons heart'>favorite</i></span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='wrong-next'><i class='material-icons'>navigate_next</i></a></div></div>";
 	$(".wrong").removeClass('hidden');
 	$(".queen-lingo-question").addClass('hidden');
 	$(".wrong").html(gameHTML);
@@ -76,7 +76,7 @@ function generateLoss() {
 function generateLossDueToTimeOut() {
 	lives -= 1;
 	unansweredTally++;
-	gameHTML = "<h1>OUT OF TIME</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + queenLingo[questionCounter].wrongImage +
+	gameHTML = "<h1>OUT OF TIME</h1><div class='row'><div class='col s12 m12 l6 xl6'>" + queenLingo[askedQuestions[i]].wrongImage +
 	"</div><div class='wrong-text col s12 m12 l6 xl6'><p>SASHAY AWAY! You lost a life!</p><ul><li id='lives-text'><b class='bold'>LIVES </b>" + lives + " <span><i class='material-icons heart'>favorite</i></span></li><li><b class='bold'>TOTAL</b> <span>" + correctTally + "pts</span><li></ul><a class='btn-floating btn-large waves-effect waves-light pink lighten-3 arrow' id='wrong-next'><i class='material-icons'>navigate_next</i></a></div></div>";
 	$(".wrong").removeClass('hidden');
 	$(".queen-lingo-question").addClass('hidden');
@@ -119,6 +119,7 @@ function winScreen() {
 function wait() {
 	if (questionCounter < queenLingo.length - 1 && lives > 0) {
 	questionCounter++;
+	askedQuestions[i++]
 	generateHTML();
 	if (correctTally >= 150) {
 	counter = 6;
@@ -204,8 +205,7 @@ function resetGame() {
 	randomOrder();
 }
 
-//Change the Lingo arrays to objects?
-
+//VARIABLES
 var startScreen;
 var gameHTML;
 var counter = 15;
@@ -367,6 +367,7 @@ var lives = 5;
 var clickSound = new Audio("sound/TonguePop.mp3");
 var askedQuestions = [];
 var inProcess = true;
+var i = 0;
 
 
 //Function to generate random Question Order

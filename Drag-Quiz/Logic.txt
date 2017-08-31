@@ -1,20 +1,8 @@
 FLOW
 - Randmoize the questions and options
-- Lower the timer after correct answers
-
-
-Iteration 1
-- Create a list of questions 
-- Create a list of answers
-- Pair correct answers to questions
-- Generate random questions
-- Do not let questions repeat
 - Generate random other answers for other options
 - Make sure the answers are not showing up in the same position 
-- Validate if user selected correct or incorrect answer
 - If incorrect display correct answer
-- Display final score after game end
-- Have the timer decrease in time after a certain amount of questions or correct answers
 
 -Design
 -Sound effects depending on if correct or wrong
