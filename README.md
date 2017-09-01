@@ -48,6 +48,6 @@ Luckily for me trivia games are not as complex as other games because the base l
 * Randomize the order of the answers
 * Create the quizzes for the other categories
 * Create mix all deck option
-* Add timer operation
+* Add timer animation
 * Clean up and restructure my code
 * Rest..
