@@ -9,7 +9,7 @@ The best and most beautiful test of drag knowledge, because when it comes to Dra
 When I was tasked to create a game for IronHack, the first thing that popped into my mind was trivia. I personally love trivia because I love learning random facts. But usually trivia games are very ugly and about boring things. So I decided to create a trivia game about the least boring thing I know.....Drag Queens. 
 
 ## Demo
-* Play the game live [here](https://philipwisner.github.io/)
+* Play the game live [here](https://philipwisner.github.io/Drag-Quiz/#)
 * Or play the game on my personal domain [here](https://)
 
 
