@@ -2,6 +2,35 @@
 @import "variables";
 
 
+@media screen and (min-width: 320px) and (max-width: 949px) {
+	.herstory {
+		h1 {
+			margin-top: -15px;
+			margin-bottom: -30px;
+		}
+		img {
+			margin-bottom: -10px;
+		}
+		.arrow {
+			position: absolute;
+			bottom: 15px;
+			left: 10px;
+		}
+	}
+}
+
+@media screen and (min-width: 950px) and (max-width: 5000px) {
+	.herstory {
+		.arrow {
+			margin-right: 20px;
+			position: absolute;
+			bottom: 50px;
+			right: 50px;
+		}
+	}
+}
+
+
 .herstory-text {
 	margin: 0 auto;
 	text-align: left;
@@ -10,18 +39,12 @@
 		padding: 1S0px;
 	}
 	ul li {
-		padding-bottom: 30px;
+		padding: 0 20px 30px 30px;
 		max-width: 600px;
 		margin: 0 auto;
 		color: $main-text-color;
 		font-weight: $main-text-weight;
-		@include responsive-font-size (1em, 1.75em, 640px, 1200px, 0.3em);
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
+		@include responsive-font-size (1em, 1.75em, 320px, 1200px, 0.3em);
 	}
 }
 
