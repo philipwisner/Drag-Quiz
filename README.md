@@ -1,21 +1,22 @@
 # Drag Quiz
-The best and most beautiful test of drag knowledge, because when it comes to Drag, the look matters.
 
-<div style="text-align:center"><img src ="https://68.media.tumblr.com/707df698616357f756380ffe1895c9df/tumblr_n8ahacwyEJ1sar3c7o1_500.gif" /></div>
+<div style="text-align:center"><img src ="http://philipwisner.com/images/dragquiz-line.svg" /></div>
+
+>The best and most beautiful test of Drag knowledge, because when it comes to Drag, the look matters.
 
 <br/>
 
 ## Introduction
-When I was tasked to create a game for IronHack, the first thing that popped into my mind was trivia. I personally love trivia because I love learning random facts. But usually trivia games are very ugly and about boring things. So I decided to create a trivia game about the least boring thing I know.....Drag Queens. 
+When I was tasked to create a game for IronHack, the first thing that popped into my mind was trivia. I personally love trivia because I love learning random facts. But usually trivia games are very ugly and about boring things. So I decided to create a trivia game about the least boring thing I know.....Drag Queens. Take a look at my presentation [here](http://slides.com/philipwisner/drag-quiz/fullscreen#/)
 
 ## Demo
 * Play the game live [here](https://philipwisner.github.io/Drag-Quiz/#)
-* Or play the game on my personal domain [here](https://)
 
+<div style="text-align:center"><img src ="https://68.media.tumblr.com/707df698616357f756380ffe1895c9df/tumblr_n8ahacwyEJ1sar3c7o1_500.gif" /></div>
 
 ## Development
 Luckily for me trivia games are not as complex as other games because the base logic is pretty easy to comprehend. So because I wanted the game to be nicely designed, modern and responsive, I started with design first.
-* I used Adobe Xd to create a the layout of all the cards.
+* I used Adobe Xd to create a the layout of all the cards. Check them out [here](https://www.figma.com/proto/cCYD28SfgVfPz5368KJV6xC9/Drag-Quiz-Wireframes?scaling=contain&node-id=1%3A1181&redirected=1)
 * I then used Adobe Xd's prototype feature to link all the cards together to mirror the game's real flow.
 * After that I then had to create the consistent background and basic card style layout that would be used throughout all of the game.
 * After that was done, I went and created all of the different card layouts for each situation in HTML and CSS (using Sass).
@@ -50,4 +51,3 @@ Luckily for me trivia games are not as complex as other games because the base l
 * Create mix all deck option
 * Add timer animation
 * Clean up and restructure my code
-* Rest..
