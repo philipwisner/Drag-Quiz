@@ -23,6 +23,21 @@
 			padding-bottom: 15px;
 		}
 	}
+	.game-over-text {
+		text-align: center;
+		p {
+			text-align: center;
+			margin-bottom: 15px;
+		}
+		ul li {
+			padding-bottom: 8px;
+		}
+		.arrow {
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+		}
+	}
 }
 
 @media screen and (min-width: 950px) and (max-width: 5000px) {
@@ -49,6 +64,22 @@
 		}
 		ul li {
 			padding-bottom: 20px;
+		}
+	}
+	.game-over-text {
+		text-align: left;
+		p {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		ul li {
+			padding-bottom: 10px;
+		}
+		.arrow {
+			margin-right: 20px;
+			position: absolute;
+			bottom: 50px;
+			right: 50px;
 		}
 	}
 }
@@ -119,11 +150,8 @@
 
 .game-over-text {
 	margin: 0 auto;
-	text-align: left;
 	p {
 		@include responsive-font-size (1.2em, 3.5em, 640px, 1200px, 0.3em);
-		text-align: center;
-		margin-bottom: 30px;
 	}
 	ul {
 		padding: 1S0px;
@@ -133,9 +161,7 @@
 		}
 	}
 	ul li {
-		padding-bottom: 10px;
 		max-width: 600px;
-		text-align: left;
 		margin: 0 auto;
 		color: $main-text-color;
 		font-weight: $main-text-weight;
@@ -146,11 +172,5 @@
 		span {
 			color: $main-text-color;
 		}
-		}
-	.arrow {
-		margin-right: 20px;
-		position: absolute;
-		bottom: 50px;
-		right: 50px;
 	}
 }
